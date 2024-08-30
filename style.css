@@ -1,0 +1,28 @@
+body{
+    background-color: #006666;
+}
+p{
+    color: #cce6ff;
+}
+a{
+    text-decoration: none;
+    color: #cce6ff;
+    background-color: #cc99ff;
+}
+.header{
+    background-color: black;
+    color: #cce6ff;
+    padding: 40px;
+    text-align: center;
+}
+.section{
+    background-color: #006666;
+    color: #cce6ff;
+    border: solid 2px;
+    text-align: justify;
+}
+.footer{
+    background-color: #8585ad;
+    text-align: center;
+    padding: 20px;
+}
