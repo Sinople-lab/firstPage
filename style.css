@@ -12,14 +12,22 @@ a{
 .header{
     background-color: black;
     color: #cce6ff;
-    padding: 40px;
     text-align: center;
+    padding: 40px 90px 10px;
+    margin:10px 20px 30px
+}
+.header h1{
+    border: solid white 3px
+}
+.header p{
+    border: solid white 2px
 }
 .section{
     background-color: #006666;
     color: #cce6ff;
     border: solid 2px;
     text-align: justify;
+    padding:20px 40px 10px 20px
 }
 .footer{
     background-color: #8585ad;
