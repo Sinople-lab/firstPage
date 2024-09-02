@@ -14,36 +14,40 @@
   }
 
 body{
-    background-color: #006666;
+    background-color: var(--color-bg);
+    background-image: url('./love.png');
 }
 p{
-    color: #cce6ff;
+    color: var(--color-light-gray);
 }
 a{
     text-decoration: none;
-    color: #cce6ff;
-    background-color: #cc99ff;
+    color: var(--color-main-light);
 }
 .header{
     background-color: black;
     color: #cce6ff;
     text-align: center;
     padding: 40px 90px 10px;
-    margin:10px 20px 30px
+    margin:10px 20px 30px;
+    border-radius:20px; 
 }
 .section{
-    background-color: hsl(180, 100%, 15%);
+    background-color: rgba(110,110,160, 0.4);
     text-align: justify;
     padding:20px 40px 10px 20px;
-    margin: 0 20px
+    height:210px;
+    margin: 10px 20px 30px;
+    border-radius: 20px;
 }
-.section p{
-    color: var(--color-main-light)
+.section > p{
+    color: var(--color-main-light);
 }
 .footer{
     background-color: #8585ad;
     text-align: center;
     padding: 20px;
-    margin-top:20px;
-    margin:30px 20px 10px
+}
+.footer > p{
+    color:lavender;
 }
