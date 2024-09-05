@@ -16,9 +16,15 @@
 body{
     background-color: var(--color-bg);
     background-image: url('./love.png');
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 p{
     color: var(--color-light-gray);
+}
+h2{
+    text-align: center;
+    color: var(--color-main-light);
 }
 a{
     text-decoration: none;
@@ -36,7 +42,7 @@ a{
     background-color: rgba(110,110,160, 0.4);
     text-align: justify;
     padding:20px 40px 10px 20px;
-    height:210px;
+    height:auto;
     margin: 10px 20px 30px;
     border-radius: 20px;
 }
