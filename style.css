@@ -31,6 +31,7 @@ a{
     color: var(--color-main-light);
 }
 .header{
+    font-size: 16px;
     background-color: black;
     color: #cce6ff;
     text-align: center;
@@ -76,8 +77,11 @@ ul span:hover{
     text-decoration:none;
     border-radius:15px;
 }
-ul>li:hover .dropdown-content{
+ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
     display:block;
+}
+.dropdown-content a:hover{
+    background-color: var(--color-dark);
 }
 /* ------------------------- */
 .section{
@@ -98,4 +102,9 @@ ul>li:hover .dropdown-content{
 }
 .footer > p{
     color:lavender;
+}
+@media only screen and (max-device-width:800px){
+    h1{
+        font-size: 1.3em;
+    }
 }
