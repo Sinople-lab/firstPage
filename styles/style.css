@@ -40,7 +40,7 @@ h2{
 }
 a{
     text-decoration: none;
-    color: var(--color-main-light);
+    color: var(--color-dark);
 }
 .header{
     font-size: 16px;
@@ -50,7 +50,33 @@ a{
     padding: 40px 60px 10px;
     margin:10px 20px 0px;
     border-top-right-radius: 20px;
-    border-top-left-radius:20px
+    border-top-left-radius:20px;
+}
+.container{
+    border: 2px solid white;
+    display: table;
+    margin:auto;
+    align-items:center;
+}
+.section{
+    background-color: rgba(110,110,160, 0.4);
+    text-align: justify;
+    height:auto;
+    padding:20px 40px 10px 20px;
+    margin: 10px 20px 30px;
+    float:left;
+    border-radius: 20px;
+}
+.section > p{
+    color: var(--color-main-light);
+}
+.footer{
+    background-color: #8585ad;
+    text-align: center;
+    padding: 20px;
+}
+.footer > p{
+    color:lavender;
 }
 /* -------  navbar --------- */
 ul{
@@ -96,27 +122,9 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
     background-color: var(--color-dark);
 }
 /* ------------------------- */
-.section{
-    background-color: rgba(110,110,160, 0.4);
-    text-align: justify;
-    padding:20px 40px 10px 20px;
-    height:auto;
-    margin: 10px 20px 30px;
-    border-radius: 20px;
-}
-.section > p{
-    color: var(--color-main-light);
-}
-.footer{
-    background-color: #8585ad;
-    text-align: center;
-    padding: 20px;
-}
-.footer > p{
-    color:lavender;
-}
+
 @media only screen and (max-device-width:800px){
     h1{
         font-size: 1.4em;
-    }
+    }        
 }
