@@ -1,4 +1,12 @@
-
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+@font-face{
+    font-family:myFont;
+    src:url('../fonts/Italiana-Regular.ttf')
+}
+@font-face{
+    font-family:Montserrat;
+    src:url('../fonts/Montserrat-VariableFont_wght.ttf')
+}
 :root {
     --color-main: #71c6dd;
     --color-main-light: #e1f6fb;
@@ -20,13 +28,22 @@ body{
     background-size:cover;
 }
 p{
+    /* font-family: "Montserrat", sans-serif; */
+    font-family:Montserrat;
+    font-weight:400;
     color: var(--color-light-gray);
 }
+h1{
+    font-family:myFont;
+    /* font-family: "Italiana", sans-serif; */
+}
 h2{
+    font-family:'Roboto';
     text-align: center;
     color: var(--color-main-light);
 }
 a{
+    font-family:'Roboto';
     text-decoration: none;
     color: var(--color-main);
 }
@@ -52,6 +69,17 @@ a{
     order:2;
     align-self:center;
     background-color: rgba(110,110,160, 0.4);
+    border:solid 2px white;
+    text-align: justify;
+    height:auto;
+    padding:20px 40px 10px 20px;
+    margin: 10px 20px 30px;
+    border-radius: 20px;
+}
+.section1{
+    order:1;
+    background-color: rgba(110,110,160, 0.4);
+    border:solid 2px white;
     text-align: justify;
     height:auto;
     padding:20px 40px 10px 20px;
