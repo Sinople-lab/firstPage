@@ -29,6 +29,7 @@ body{
     background-image: url('../images/love.png');
     background-repeat:no-repeat;
     background-size:cover;
+    margin:0px;
 }
 p{
     /* font-family: "Montserrat", sans-serif; */
@@ -86,7 +87,7 @@ a{
     position:absolute;
     width:100px;
     border-radius:15px;
-    background-color:var(--color-dark-light)
+    background-color:var(--color-dark-medium)
 }
 .dropdown-content a{
     display:block;
@@ -166,6 +167,21 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
 
 @media only screen and (max-device-width:800px){
     h1{
-        font-size: 1.4em;
-    }        
+        font-size: 2em;
+    }
+    .navbar>ul{
+        margin:0px;
+    }
+    .sidemenu{
+        display:none;
+    }
+    .header{
+        margin:50px 20px 0px 20px;
+    }
+    .container{
+        margin:0px 20px 0px 20px;
+    }
+    .section0{
+        margin: 10px 20px 10px;
+    }
 }
