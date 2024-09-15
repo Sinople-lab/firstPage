@@ -1,4 +1,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
 @font-face{
     font-family:myFont;
     src:url('../fonts/Italiana-Regular.ttf')
@@ -30,15 +33,18 @@ body{
 p{
     /* font-family: "Montserrat", sans-serif; */
     font-family:Montserrat;
-    font-weight:400;
+    font-weight:300;
     color: var(--color-light-gray);
 }
 h1{
     font-family:myFont;
+    font-weight: 400;
+    font-size:40px;
+    font-style: normal;
     /* font-family: "Italiana", sans-serif; */
 }
 h2{
-    font-family:'Roboto';
+    font-family:'Roboto Mono', monospace;
     text-align: center;
     color: var(--color-main-light);
 }
@@ -47,73 +53,16 @@ a{
     text-decoration: none;
     color: var(--color-main);
 }
-.header{
-    font-size: 16px;
-    background-color: black;
-    color: #cce6ff;
-    text-align: center;
-    padding: 40px 60px 10px;
-    margin:10px 20px 0px;
-    border-top-right-radius: 20px;
-    border-top-left-radius:20px;
-}
-.container{
-    border: 2px solid white;
-    display: flex;
-    margin:auto;
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:space-around
-}
-.section0{
-    order:2;
-    align-self:center;
-    background-color: rgba(110,110,160, 0.4);
-    border:solid 2px white;
-    text-align: justify;
-    height:auto;
-    padding:20px 40px 10px 20px;
-    margin: 10px 20px 30px;
-    border-radius: 20px;
-}
-.section1{
-    order:1;
-    background-color: rgba(110,110,160, 0.4);
-    border:solid 2px white;
-    text-align: justify;
-    height:auto;
-    padding:20px 40px 10px 20px;
-    margin: 10px 20px 30px;
-    border-radius: 20px;
-}
-.section{
-    order:1;
-    background-color: rgba(110,110,160, 0.4);
-    text-align: justify;
-    height:auto;
-    padding:20px 40px 10px 20px;
-    margin: 10px 20px 30px;
-    border-radius: 20px;
-}
-.section > p{
-    color: var(--color-main-light);
-}
-.footer{
-    background-color: #8585ad;
-    text-align: center;
-    padding: 20px;
-}
-.footer > p{
-    color:lavender;
-}
 /* ---------  navbar --------- */
-ul{
+.navbar{
     background-color: var(--color-dark-light);
-    overflow: hidden;
-    padding: 0;
     margin:0px 20px 30px;
     border-bottom-left-radius:20px;
     border-bottom-right-radius:20px;
+}
+ul{
+    display:block;
+    overflow: hidden;
 }
 ul>li{
     display: inline;
@@ -150,6 +99,65 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
     background-color: var(--color-dark);
 }
 /* ------------------------- */
+.sidemenu{
+    order:1;
+    background-color: rgba(110,110,160, 0.8);
+    text-align: justify;
+    height:auto;
+    padding:20px 40px 10px 20px;
+    margin: 10px 20px 30px;
+}
+/* ------------------------------------- */
+.header{
+    font-size: 16px;
+    background-color: black;
+    color: #cce6ff;
+    text-align: center;
+    padding: 40px 60px 10px;
+    margin:10px 20px 0px;
+    border-top-right-radius: 20px;
+    border-top-left-radius:20px;
+}
+.container{
+    border: 2px solid white;
+    display: flex;
+    margin:auto;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:space-around
+}
+.section0{
+    order:2;
+    align-self:center;
+    background-color: rgba(110,110,160, 0.4);
+    border:solid 2px white;
+    text-align: justify;
+    height:auto;
+    padding:20px 40px 10px 20px;
+    margin: 10px 20px 30px;
+    border-radius: 20px;
+}
+.section{
+    order:1;
+    background-color: rgba(110,110,160, 0.4);
+    text-align: justify;
+    height:auto;
+    padding:20px 40px 10px 20px;
+    margin: 10px 20px 30px;
+    border-radius: 20px;
+}
+.section > p{
+    color: var(--color-main-light);
+}
+/* --------------------------------------------- */
+.footer{
+    background-color: #8585ad;
+    text-align: center;
+    padding: 20px;
+}
+.footer > p{
+    color:lavender;
+}
 
 @media only screen and (max-device-width:800px){
     h1{
