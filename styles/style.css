@@ -55,26 +55,29 @@ a{
 }
 /* ---------  navbar --------- */
 .navbar{
+    z-index: 2;
+    position:fixed;
+    top:0px;
+    width:100%;
+}
+.navbar > ul{
     background-color: var(--color-dark-light);
-    margin:0px 20px 30px;
+    margin:0px 20px 0px;
     border-bottom-left-radius:20px;
     border-bottom-right-radius:20px;
-}
-ul{
-    display:block;
     overflow: hidden;
 }
-ul>li{
+.navbar > ul>li{
     display: inline;
     float: left;
 }
-ul>li > span{
+.navbar > ul>li > span{
     color: var(--color-main);
     display: block;
     padding:8px;
     cursor:pointer;
 }
-ul span:hover{
+.navbar> ul span:hover{
     background-color:var(--color-dark-medium)
 }
 /* ---------------- dropdown ------------------ */
@@ -100,12 +103,14 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
 }
 /* ------------------------- */
 .sidemenu{
-    order:1;
+    position:fixed;
+    top:50px;
+    left:20px;
     background-color: rgba(110,110,160, 0.8);
-    text-align: justify;
+    text-align: left;
     height:auto;
+    width:180px;
     padding:20px 40px 10px 20px;
-    margin: 10px 20px 30px;
 }
 /* ------------------------------------- */
 .header{
@@ -114,14 +119,14 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
     color: #cce6ff;
     text-align: center;
     padding: 40px 60px 10px;
-    margin:10px 20px 0px;
-    border-top-right-radius: 20px;
-    border-top-left-radius:20px;
+    margin:50px 20px 0px 280px;
+    border-radius: 20px;
+    /* border-top-right-radius: 20px;
+    border-top-left-radius:20px; */
 }
 .container{
-    border: 2px solid white;
     display: flex;
-    margin:auto;
+    margin:0px 20px 0px 280px;
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:space-around
@@ -130,7 +135,7 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
     order:2;
     align-self:center;
     background-color: rgba(110,110,160, 0.4);
-    border:solid 2px white;
+    /* border:solid 2px white; */
     text-align: justify;
     height:auto;
     padding:20px 40px 10px 20px;
