@@ -83,6 +83,9 @@ a{
     padding:1.2vh;
     cursor:pointer;
 }
+.navbar > ul>li > svg{
+    margin-top: 1vh;
+}
 .navbar> ul span:hover{
     background-color:var(--color-dark-medium)
 }
@@ -150,6 +153,18 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
     justify-content:space-around
 }
 .section0{
+    order:2;
+    align-self:center;
+    background-color: rgba(110,110,160, 0.4);
+    border:solid 2px white;
+    text-align: justify;
+    height:auto;
+    padding:20px 40px 10px 20px;
+    margin: 10px 1.3vw 10px 20px;
+    border-radius: 20px;
+}
+/* --------------------------------- */
+.section1{
     order:1;
     align-self:center;
     background-color: rgba(110,110,160, 0.4);
@@ -160,6 +175,7 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
     margin: 10px 1.3vw 10px 20px;
     border-radius: 20px;
 }
+/* ------------------------------------------ */
 .section{
     border:solid 2px white;
     order:1;
