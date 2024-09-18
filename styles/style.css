@@ -43,13 +43,15 @@ h1{
     font-weight: 400;
     font-size:3rem;
     font-style: normal;
+    margin:1.2vh 0 1.2vh 0;
     /* font-family: "Italiana", sans-serif; */
 }
 h2{
     font-family:'Roboto Mono', monospace;
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--color-main-light);
+    margin:0 0 0 0;
 }
 a{
     font-family:'Roboto Mono', monospace;
@@ -143,6 +145,10 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
     border-radius: 20px;
     /* border-top-right-radius: 20px;
     border-top-left-radius:20px; */
+}
+.header > a{
+    color:#5dd693;
+    font-size:1.2rem
 }
 .container{
     /* border:solid 2px white; */
