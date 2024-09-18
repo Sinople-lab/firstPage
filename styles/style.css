@@ -35,7 +35,7 @@ p{
     /* font-family: "Montserrat", sans-serif; */
     font-family:Montserrat;
     font-weight:400;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     color: var(--color-light-gray);
 }
 h1{
@@ -58,7 +58,7 @@ a{
     text-decoration: none;
     color: var(--color-main);
 }
-/* ---------  navbar --------- */
+/* ---------  big navbar --------- */
 .navbar{
     z-index: 2;
     position:fixed;
@@ -108,11 +108,42 @@ a{
     text-decoration:none;
     border-radius:15px;
 }
-ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
-    display:block;
-}
 .dropdown-content a:hover{
     background-color: var(--color-dark);
+}
+ul>li:hover .dropdown-content{
+    display:block;
+}
+/* -------------- small anvbar ---------------- */
+.smallnav{
+    display:none;
+    z-index:3;
+    position:fixed;
+    top:10px;
+    margin-left:3vw;
+    color:var(--color-main-light);
+    cursor:pointer;
+    font-size:1.6rem;
+}
+.smallnav-content{
+    display:none;
+    position:absolute;
+    width:150px;
+    background-color:var(--color-dark-medium)
+}
+.small-content>a{
+    display:block;
+    color:var(--color-main);
+    font-size:1rem;
+    margin-left:1vw;
+    padding:0.4vh 1vw 0.4vh 1vw;
+    text-decoration:none;
+}
+.small-content>a:active{
+    background-color:var(--color-dark-light)
+}
+.smallnav:hover .smallnav-content, .smallnav:active .smallnav-content{
+    display:block
 }
 /* -------------------------------------------------------- */
 .sidemenu{
@@ -238,10 +269,12 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
 .footer > p{
     color:lavender;
 }
-
 @media only screen and (max-device-width:800px){
     h1{
         font-size: 2.4rem;
+    }
+    .smallnav{
+        display:block
     }
     .navbar{
         display:none
@@ -254,7 +287,7 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
     }
     .header{
         padding-top: 1vh;
-        margin:2vh 0vw 0 0vw;
+        margin:1vh 0vw 0 0vw;
     }
     .container{
         margin:0;
@@ -280,6 +313,7 @@ ul>li:hover .dropdown-content, ul>li:active .dropdown-content{
     .contact-info{
         margin:0;
         width:100%;
+        height:100%;
         background-color:rgba(45, 45, 57,0.8)
     }
     .footer{
