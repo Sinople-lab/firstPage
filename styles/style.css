@@ -46,11 +46,11 @@ h1{
     font-style: normal;
     margin:1.2vh 0 1.2vh 0;
     /* font-family: "Italiana", sans-serif; */
-    
+    text-shadow:0px 0px 0.2em var(--color-glow)
 }
 .glowing-txt{
     color:var(--color-glow);
-    animation:glowing-txt 4s infinite;
+    animation:glowing-txt 3s infinite;
     perspective:2em;
 }
 .glowing-txt:hover{
@@ -62,11 +62,11 @@ h1{
     display:block;
     pointer-events:none;
     background-color:var(--color-glow);
-    opacity:0.9;
+    opacity:1;
     padding:15px;
     width:100%;
     filter:blur(0.4em);
-    transform:translate(-1%, 400%) rotatex(55deg) scale(0.6, 1.3);
+    transform:translate(-1%, 410%) rotatex(55deg) scale(0.6, 1.3);
 }
 h2{
     font-family:'Roboto Mono', monospace;
@@ -82,7 +82,7 @@ a{
 }
 /* ---------  big navbar --------- */
 .navbar{
-    z-index: 2;
+    z-index: 1;
     position:fixed;
     top:0px;
     width:100%;
@@ -114,13 +114,24 @@ a{
 .navbar> ul span:hover{
     background-color:var(--color-dark-medium)
 }
+.links{
+    position:fixed;
+    top:0.7vh;
+    right:3vw;
+    font-size: 1.4rem;
+}
+.links >a >i:hover{
+    transform:scale(2,2);
+    transition:0.7s ease;
+}
 /* ---------------- dropdown ------------------ */
 .dropdown-content{
     display:none;
     position:absolute;
     width:150px;
     border-radius:15px;
-    background-color:var(--color-dark-medium)
+    background-color:var(--color-dark-medium);
+    box-shadow:3px 3px 0.2em 0em red
 }
 .dropdown-content > a{
     display:block;
@@ -194,11 +205,10 @@ ul>li:hover .dropdown-content{
 }
 /* ------------------------------------- */
 .header{
-    font-size: 1rem;
     background-color: black;
     color: #cce6ff;
     text-align: center;
-    padding: 40px 60px 40px;
+    padding: 10px 60px 60px;
     margin:8vh 1.4vw 0 18vw;
     border-radius: 20px;
     /* border-top-right-radius: 20px;
@@ -211,6 +221,7 @@ ul>li:hover .dropdown-content{
     color:#5dd693;
     font-size:1.2rem
 }
+/* ---------------------------------------- */
 .container{
     /* border:solid 2px white; */
     display: flex;
@@ -240,6 +251,10 @@ ul>li:hover .dropdown-content{
     padding:20px 40px 10px 20px;
     margin: 10px 1.3vw 10px 20px;
     border-radius: 20px;
+}
+.section1:hover svg{
+    transform:scale(1.3,1.3);
+    transition:0.6s ease
 }
 /* ------------------------------------------ */
 .section{
@@ -302,17 +317,14 @@ ul>li:hover .dropdown-content{
     0%{
         opacity:0.1
     }
-    2%{
+    1%{
         opacity:0.9
     }
-    10%{
+    8%{
         opacity:0.2
     }
-    11%{
-        opacity:0.8
-    }
-    22%{
-        opacity:0.1
+    9%{
+        opacity:0.9
     }
     23%{
         opacity:0.4
@@ -321,13 +333,13 @@ ul>li:hover .dropdown-content{
         opacity:1
     }
     60%{
-        opacity:0.8
+        opacity:0.9
     }
     62%{
         opacity:1
     }
     93%{
-        opacity:0.5
+        opacity:0.9
     }
     100%{
         opacity:1
