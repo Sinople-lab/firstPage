@@ -276,21 +276,22 @@ ul>li:hover .dropdown-content{
     background-color: rgba(110,110,160, 0.9);
     text-align: justify;
     height:auto;
-    width:40%;
+    width:43%;
     padding:1vh 2vw 3vh 1.3vw;
-    margin: 2vh 1.4vw 2vh 0;
+    margin: 2vh 1vw 2vh 0;
     border-radius: 20px;
 }
 .sectionhalf > p{
     color: var(--color-main-light);
 }
 /* --------------------------------- */
-.section1{
-    order:1;
+.section0{
+    order:2;
     align-self:center;
-    background-color: rgba(110,110,160, 0.4);
+    background-color: rgba(110,110,160, 0.5);
     text-align: justify;
     height:auto;
+    width:30vw;
     padding:1.3vh 1vw;
     margin: 1vh 1vw;
     border-radius: 20px;
