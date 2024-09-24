@@ -143,6 +143,7 @@ a{
     background-color:var(--color-dark-medium)
 }
 .links{
+    z-index:2;
     position:fixed;
     top:0.7vh;
     right:3vw;
