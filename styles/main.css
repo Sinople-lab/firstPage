@@ -1,12 +1,28 @@
+:root {
+    --color-main: #71c6dd;
+    --color-main-light: #e1f6fb;
+    --color-dark: #3f4156;
+    --color-dark-medium: #51546e;
+    --color-dark-light: #696d97;
+    --color-light: #e5e5e5;
+    --color-gray: #8b8b8b;
+    --color-light-gray: #b2bdbd;
+    --color-bg: #2d2d39;
+    --color-success: #5dd693;
+    --color-error: #fc4b0b;
+    --color-glow:#61efff;
+}
+
 .main{
     display:flex;
     width:100%;
     height:98vh;
     background-color:rgba(0,0,0,1);
-    justify-content:center;
+    justify-content:space-around;
     align-items:center;
 }
 .main>h1{
+    order: 2;
     font-size:6rem;
 }
 .main>.glowing-txt{
@@ -22,6 +38,34 @@
 }
 .main>.links{
     display: none;
+}
+.previous{
+    order:2;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-top: 1vh;
+    padding-left: 0.4vw;
+    background-color: rgba(0,0,0,0.1);
+    transform: scale(4,4);
+    cursor:pointer;
+}
+.previous:hover{
+    background-color: var(--color-dark-medium);
+}
+.next{
+    order: 3;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    padding-top: 1vh;
+    padding-left: 0.5vw;
+    background-color: rgba(0,0,0,0.1);
+    transform: scale(4,4);
+    cursor:pointer;
+}
+.next:hover{
+    background-color: var(--color-dark-medium);
 }
 /* -------- contact --------- */
 .main-contact{
