@@ -52,7 +52,7 @@ h1{
     margin:1.2vh 0 1.2vh 0;
     /* font-family: "Italiana", sans-serif; */
     text-align:center;
-    text-shadow:0px 0px 0.2em var(--color-glow)
+    text-shadow:0px 0px 0.1em var(--color-glow)
 }
 .glowing-txt{
     color:var(--color-glow);
