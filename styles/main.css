@@ -23,13 +23,14 @@
     flex-direction: row;
     flex-wrap: wrap;
 }
+/* -------------------- slider ------------------- */
 .wrapper{
     order:2;
     height: 82vh;
     width: 67vw;
     overflow-y: hidden;
 
-    /* --------- x scroll ---------- */
+    /* ---------- x scroll enable ----------- */
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
@@ -60,8 +61,38 @@
     width:50vw;
     opacity:0.7;
     filter:blur(0.2em);
-    transform:translate(-1%, 450%) rotatex(30deg) scale(1, 2.6);
+    transform:translate(-1%, 450%) rotatex(30deg) scale(1, 2.7);
 }
+#html{
+    border: solid 4px #fc4b0b;
+    box-shadow:0 0 30px 0px #fc4b0b;
+}
+#html> .glowing-txt{
+    color: #fc4b0b;
+
+}
+#html > h1{
+    text-shadow:0px 0px 0.1em #fc4b0b;
+}
+#html > .glowing-txt::before{
+    background-color:#fc4b0b
+}
+
+#js{
+    border: solid 4px #f0db4f;
+    box-shadow:0 0 30px 0px #f0db4f;
+}
+#js> .glowing-txt{
+    color: #f0db4f;
+
+}
+#js > h1{
+    text-shadow:0px 0px 0.1em #f0db4f;
+}
+#js > .glowing-txt::before{
+    background-color:#f0db4f
+}
+/* ----------------------------------------------- */
 .main>.links{
     display: none;
 }
