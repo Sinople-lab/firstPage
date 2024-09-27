@@ -74,6 +74,7 @@
     align-items: center;
     justify-content: center;
 
+    scroll-margin: 30vh;
     scroll-snap-align: center;
     scroll-snap-stop:always;
 }
