@@ -155,7 +155,7 @@
 }
 @media only screen and (max-device-width:800px){
     .main{
-        height:60vh;
+        height:67vh;
         margin-top: 6.2vh;
         padding-bottom: 0;
         flex-direction: column;
