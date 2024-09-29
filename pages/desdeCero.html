@@ -20,6 +20,8 @@
 		<title>
 			html desde cero
 		</title>
+
+		<!-- Example of css in an html file -->
 		<style>
 			table{
 				width: 100%;
@@ -110,7 +112,7 @@
 				<a href="https://github.com/Sinople-lab"><i class="fa fa-github" style="margin:4px 2px 0 2px;color:white"></i></a> <a href="https://www.youtube.com/@Ashur-lab"> <i class="fa fa-youtube-play" style="margin:4px 2px 0 2px;color:red"></i></a> <a href="https://www.instagram.com/shur_d_firsiel/"> <i class="fa fa-instagram" style="margin:4px 2px 0 2px;color:violet"></i></a>
 			</div>	
 		</div>
-		<!-- ------------------------------------- -->
+		<!-- ----------------------------------------------------- -->
 		<div class="sidemenu">
 			<h2><i class="fa fa-css3"></i> CSS / html</h2>
 			<ol>
@@ -216,17 +218,23 @@
 					<code>&lt!DOCTYPE html&gt</code>. HTML viene de HyperText Markup Language(Lenguaje de Marcas de
 					Hipertexto) es decir esas etiquetas que vez aqui rodeadas por "&lt" y "&gt".
 				</p>
+				<p>
+					En este ejemplo de <span class="code">html</span> que te muestro esta la etiqueta &lthtml&gt,
+					esta etiqueta debe envolver todo el codigo a excepcion de &ltDOCTYPE html&gt, a &lthtml&gt tambien
+					se le conore como el <span class="code">root element</span>, mas adelante cuando se mencione a
+					<span class="code">root</span> nos referiremos a <span class="code">&lthtml&gt</span>
+				</p>
 			</div>
 			<div class="section0">
 				<span class="code">
 					&lt!DOCTYPE html&gt<br>
 					&lthtml&gt<br>
 						&lthead&gt<br>
-							&lttitle&gt Page Title &lt/title&gt<br>
+							&lttitle&gt Titulo del sitio &lt/title&gt<br>
 						&lt/head&gt<br>
 						&ltbody&gt<br>
-							&lth1&gtMy First Heading&lt/h1&gt<br>
-							&ltp&gtMy first paragraph.&lt/p&gt<br>
+							&lth1&gtEncabezado de la pagina/h1&gt<br>
+							&ltp&gtMi primer parrafo.&lt/p&gt<br>
 						&lt/body><br>
 					&lt/html>
 				</span>
@@ -234,26 +242,61 @@
 		</div>
 
 		<div class="container">
-			<div class="section">
+			<div class="sectionhalf" style="order: 1;">
 				<p>
-					En este ejemplo de <span class="code">html</span> que te muestro esta la etiqueta &lthtml&gt,
-					esta etiqueta debe envolver todo el codigo a excepcion de &ltDOCTYPE html&gt, a &lthtml&gt tambien
-					se le conore como el <span class="code">root element</span>, mas adelante cuando se mencione a
-					<span class="code">root</span> nos referiremos a &lthtml&gt. Dentro de las etiquetas de &lthead&gt
-					se coloca informacion sobre la pagina como titulo, descripcion, logo; enlaces a hojas de estilo, es
-					decir archivos de extension .css ya sea locales, dentro de nuestros folders de proyecto, o provenientes
+					Dentro de las etiquetas de <span class="code">&lthead&gt</span>
+					se coloca informacion sobre la pagina como titulo; descripcion, con la etiqueta
+					<span class="code">&ltmeta&gt</span>; logo, con la etiqueta <span class="code">&ltlink&gt</span>;
+					enlaces a hojas de estilo, tambien con <span class="code">&ltlink&gt</span>, es
+					decir archivos de extension <span class="code">.css</span> ya sea locales, dentro de nuestros folders de proyecto, o provenientes
 					de paginas web externas como &copy<a href="https://www.w3schools.com/default.asp">W3Schools</a>
-					y &copy<a href="https://getbootstrap.com/">Bootstrap</a>. Y ya que menciono
-					&copy<a href="https://www.w3schools.com/default.asp">W3Schools</a>, quisiera recomendarte mucho dicha
-					pagina, es un sitio web sobre cursos en programacion ya sea web y de otros tipos como <code>C++</code>,
-					<code>python</code>, <code>R</code>, etc.
+					y &copy<a href="https://getbootstrap.com/">Bootstrap</a>. Como puedes ver dentro de
+					<span class="code">&ltlink&gt</span> se escribe <span class="code">rel=""</span>, donde se indica
+					la relacion que tiene aquello a lo que estamos haciendo referencia, y en <span class="code">href=""</span>
+					escribimos la url del archivo del cual vamos a tomar contenido.
 				</p>
+			</div>
+
+			<div class="section0" style="order: 2;">
+				<span class="code">
+					&lthead&gt<br>
+						&lttitle&gt Titulo del sitio &lt/title&gt<br>
+						&ltmeta<br>
+							name="Pagina didactica" <br>
+							content="Sitio web para aprender las bases de programacion web"<br>
+						/&gt<br>
+						<br>
+						&ltlink<br>
+							rel="stylesheet" content="./style.css"<br>
+						/&gt<br>
+						&ltlink<br>
+							rel="logo" content="./icon.png"<br>
+						/&gt<br>
+					&lt/head&gt<br>
+				</span>
+			</div>
+			
+			<div class="sectionhalf" style="order: 3;">
 				<p>
-					Muy bien ahora sobre la etiqueta &lt body &gt, en esta etiqueta colocas todo lo que el usuario vera cuando
-					entre a tu pagina, en este ejemplo se muestra un  &lt h1 &gt, que es texto con el tamaño mas grande
-					dentro de las paginas web, el titulo de alla arriba que parpadea es un &lt h1 &gt. Por ultimo se coloca
-					texto regular usando la etiqueta &lt p &gt.
+					Muy bien ahora sobre la etiqueta <span class="code">&ltbody&gt</span>, en esta etiqueta colocas todo
+					lo que el usuario vera cuando entre a tu pagina, en este ejemplo se muestra un
+					<span class="code">&lth1&gt</span>, que es el encabezado y el texto con el tamaño mas grande
+					dentro de las paginas web, el titulo de alla arriba que parpadea es un <span class="code">&lth1&gt</span>.
+					Por ultimo se coloca texto regular usando la etiqueta <span class="code">&ltp&gt</span>. Bueno eso es
+					todo lo que coloque en este ejemplo, pero se puede colocar mucho mas. Pero lo veremos en los
+					siguientes capitulos.
 				</p>
+			</div>
+
+			<div class="section0" style="order: 4;">
+				<span class="code">
+					&ltbody&gt<br>
+						<br>
+						&lth1&gtEncabezado de la pagina/h1&gt<br>
+						&ltp&gtMi primer parrafo.&lt/p&gt<br>
+						<br>
+					&lt/body><br>
+				</span>
 			</div>
 		</div>
 
