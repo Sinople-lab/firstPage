@@ -189,11 +189,13 @@
     .previous{
         display: flex;
         padding-left:1vw;
+        margin-bottom: 3vh; /* actual bottom of this block */
         transform: rotateZ(90deg) scale(3);
     }
     .next{
         display: flex;
         padding-left:2vw;
+        margin-top: 4vh ; /* actual top of this block */
         transform: rotateZ(90deg) scale(3);
     }
     .footer{width: 100%;}
