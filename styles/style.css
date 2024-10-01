@@ -109,6 +109,11 @@ a{
     padding:0;
     border-radius:16px;
 }
+.embed{
+    order: 2;
+    width: 43%;
+    margin: 2vh 2vw 0.5vh;
+}
 /* ////////////////////////////////////////////////// */
 /* ---------------  big navbar ------------ */
 .navbar{
