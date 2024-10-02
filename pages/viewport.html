@@ -52,8 +52,8 @@
 		
 		<!-- //////////////// HEADER ////////////////-->
 		<div class="header" >
-			<h1 class="glowing-txt" id="bigh">CSS</h1>
-			<h1 class="glowing-txt" id="smallh"><i class="fa fa-css3"></i></h1>		
+			<h1 class="glowing-txt" id="bigh">Viewport</h1>
+			<h1 class="glowing-txt" id="smallh">Viewport</h1>		
 		</div>
 		
 		<!-- //////////////// small menu /////////// -->
@@ -144,25 +144,40 @@
 		<div class="container">
 			<div class="sectionhalf">
 				<h2>Aprende CSS desde cero</h2>
-				<h3>Que es <i class="fa fa-css3"></i>CSS??</h3>
+				<h3>Que es CSS??</h3>
 				<p>
-					CSS <i class="fa fa-css3"></i> biene de Cascading Style Sheet u Hoja de Estilo en Cascada
-					y nos permite personalizar visualmente nuestra pagina. Los estilos se pueden aplicar dentro
-					de las propias etiquetas de <i class="code">html</i> por ejemplo en un
-					<i class="code">&ltdiv&gt</i>, <i class="code">&ltdiv style="background-color:#0000"&gt</i>.
-					Aqui estamos modificando el color de fondo a un color negro en exagecimal, lo cual es
-					similar a <i class="code">RGB</i>, los primeros 2 digitos son para la intensidad de rojo,
-					los siguientes 2 son para definir la intensidad del color verde y los 2 ultimos son para
-					definir la parde azul. Y bueno basicamente podrias definir cualquier propiedad de CSS aqui,
-					pero una mejor forma es hacerlo en la etiqueta <i class="code">&ltstyle&gt</i>, dentro
-					de <i class="code">&lthead&gt</i>.
+					Primero necesitas un editor. No es necesario tener un editor muy ostentoso,
+					de hecho podrias usar notepad de windows, sin embargo quisiera
+					sugerirte algunas opciones. <i class="fa fa-th"></i><br> La primera es 
+					&copy<a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>,
+					es gratuito y cuenta con mucha funcionalidad, te permite explorar en las carpetas
+					de tu proyecto y le puedes agregar funcionalidad como cutocompletar codigo, puede generar
+					templates de codigo con solo escribir algo como <i class="code">.seccion</i> y pulsar
+					enter para generar un <i class="code">div</i> con <i class="code">class="seccion"</i>,
+					por ejemplo.
+				</p>
+				<p>
+					Otra buena opcion es 
+					&copy<a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDE</a>.
+					Cuenta con funcionalidad similar
+					a <a href="https://code.visualstudio.com/" target="blank_">Visual Studio Code</a>,
+					aunque en mi opinion desde la perspectiva de nuevos en programacion ambos son amigables
+					para principiantes y robustos para avanzados ya que te llevan de la mano en tu practica
+					<i class="fa fa-keyboard-o"></i> y con sus funciones avanzadas te ayudan a hacer
+					debugging<i class="fa fa-bug"></i> y testing<i class="fa fa-laptop"></i>, cuando
+					estes listo.
+				</p>
+				<p>
+					Estas son mis recomendaciones pero aun hay mas editores que puedes encontrar como
+					<a href="https://brackets.io/?lang=en">Brackets</a>, <a href="https://www.geany.org/">Geany</a>,
+					por mencionar otros.
 				</p>
 			</div>
 			<div class="embed">
 				<iframe
 					width="100%"
 					height="100%"
-					src="https://www.youtube.com/embed/0xjSgT_mYro?autoplay=0&loop=0&autopause=1"
+					src="https://www.youtube.com/embed/GZ5nA7CkMEU?autoplay=0&loop=0&autopause=1"
 					frameborder="0"
 					referrerpolicy="strict-origin-when-cross-origin"
 					allowfullscreen
@@ -171,45 +186,43 @@
 		</div>
 
 		<div class="container">
-			<div id="paragraph" class="sectionhalf" style="order:1">
+			<div class="image intellij" style="width:auto">
+				<h2>IntelliJ IDE</h2>
+				<img src="../images/intellij.png" title="Intellij IDE" width="100% height=auto"></div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div id="paragraph" class="sectionhalf">
 				<p>
-					En este ejemplo se definen los estilos dentro de la etiqueta
-					<i class="code">&ltstyle&gt</i>. Se establece un color de fondo negro en
-					formato <i class="code">RGBA</i> para <i class="code">&ltbody&gt</i>, es decir
-					para toda la pagina, modificanco la propiedad
-					<i class="code">backbround-color</i>. Para el texto del encabezado,
-					<i class="code">&lth1&gt</i>, se establece un color beige, con la propiedad 
-					<i class="code">color</i> y para la etiqueta de texto regular,
-					<i class="code">&ltp&gt</i>, se	definen un color whitesmoke y tipo de letra Arial,
-					modificanco la propiedad <i class="code">font-family</i>.
+					Muy bien ahora que estas preparado puedes empezar a escribir en HTML. Debes saber que
+					HTML es un lenguaje interpretado, es decir que el buscador lo lee y lo convierte a codigo.
+					Esto se hace para mantener un estandar que sea igual independientemente de que buscador se use,
+					por ello cuando empiezas a escribir debes indicar el tipo de documento con la etiqueta
+					<code>&lt!DOCTYPE html&gt</code>. HTML viene de HyperText Markup Language(Lenguaje de Marcas de
+					Hipertexto) es decir esas etiquetas que vez aqui rodeadas por "&lt" y "&gt".
 				</p>
 				<p>
-					Esta forma de definir estilos es combeniente cuando se necesita modificar 
-					exclusivamente las propiedades de contenedores que se encuentren en esta misma pagina,
-					pero estas definiciones no se pueden usar en otros archivos <i class="code">html</i>
-					dentro del mismo directorio. Asi que para poder definir propiedades que apliquen a todo
-					el sitio web se usan los archivos de extencion <i class="code">.css</i>.
+					En este ejemplo de <span class="code">html</span> que te muestro esta la etiqueta &lthtml&gt,
+					esta etiqueta debe envolver todo el codigo a excepcion de &ltDOCTYPE html&gt, a &lthtml&gt tambien
+					se le conore como el <span class="code">root element</span>, mas adelante cuando se mencione a
+					<span class="code">root</span> nos referiremos a <span class="code">&lthtml&gt</span>
 				</p>
 			</div>
-			<div class="section0" style="order:2">
+			<div class="section0">
 				<span class="code">
-					&lthead&gt<br>
-						&lttitle&gtTitulo del sitio&lt/title&gt<br>
-						&ltstyle&gt<br>
-							<br>
-							body{<br>
-								background-color:rgba(0,0,0,1);<br>
-							}<br>
-							h1{<br>
-								color: beige;<br>
-							}<br>
-							p{<br>
-								font-family:Arial;<br>
-								color:whitesmoke<br>
-							}<br>
-							<br>
-						&lt/style&gt<br>
-					&lt/head&gt<br>
+					&lt!DOCTYPE html&gt<br>
+					&lthtml&gt<br>
+						&lthead&gt<br>
+							&lttitle&gt<br>
+							Titulo del sitio<br>
+							&lt/title&gt<br>
+						&lt/head&gt<br>
+						&ltbody&gt<br>
+							&lth1&gtEncabezado de la pagina&lt/h1&gt<br>
+							&ltp&gtMi primer parrafo.&lt/p&gt<br>
+						&lt/body><br>
+					&lt/html>
 				</span>
 			</div>
 		</div>
@@ -217,27 +230,25 @@
 		<div class="container">
 			<div class="sectionhalf" style="order: 1;">
 				<p>
-					Dentro de un archivo <i class="code">css</i> defines propiedades de la misma
-					forma que acabamos de hacer dentro de la etiqueta <i class="code">&ltstyle&gt</i>,
-					pero sin usar ninguna etiqueta.
-				</p>
-				<p>
-					Una vez creado el archivo podras usarlo con la etiqueta <i class="code">&ltlink&gt</i>,
-					de la que hablamos en el capitulo anterior. Puedes guardar el archivo <i class="code">css</i>
-					en el mismo directorio que <i class="code">index.html</i>, pero yo te recomiendo crear
-					un subdirectorio llamado styles, ya que en un sitio web se suelen usar varios archivos.
-				</p>
-				<p>
-					Entonces al escribir la direccion del archivo <i class="code">css</i> queda de esta
-					forma, indicando en que subdirectorio se encuentra. Lo mismo te recomiendo para las
-					imagenes que uses en tus paginas.
+					Dentro de las etiquetas de <span class="code">&lthead&gt</span>
+					se coloca informacion sobre la pagina como titulo; descripcion, con la etiqueta
+					<span class="code">&ltmeta&gt</span>; logo, con la etiqueta <span class="code">&ltlink&gt</span>;
+					enlaces a hojas de estilo, tambien con <span class="code">&ltlink&gt</span>, es
+					decir archivos de extension <span class="code">.css</span> ya sea locales, dentro de nuestros folders de proyecto, o provenientes
+					de paginas web externas como &copy<a href="https://www.w3schools.com/default.asp">W3Schools</a>
+					y &copy<a href="https://getbootstrap.com/">Bootstrap</a>. Como puedes ver dentro de
+					<span class="code">&ltlink&gt</span> se escribe <span class="code">rel=""</span>, donde se indica
+					la relacion que tiene aquello a lo que estamos haciendo referencia, y en <span class="code">href=""</span>
+					escribimos la url del archivo del cual vamos a tomar contenido.
 				</p>
 			</div>
 
 			<div class="section0" style="order: 2;">
 				<span class="code">
 					&lthead&gt<br>
-						&lttitle&gtTitulo del sitio&lt/title&gt<br>
+						&lttitle&gt<br>
+						Titulo del sitio<br>
+						&lt/title&gt<br>
 						&ltmeta<br>
 							name="Pagina didactica" <br>
 							content="Sitio web para aprender las bases de programacion web"<br>
@@ -245,37 +256,40 @@
 						<br>
 						&ltlink<br>
 							rel="stylesheet"<br>
-							href="./styles/style.css"<br>
+							content="./style.css"<br>
 						/&gt<br>
 						&ltlink<br>
 							rel="logo"<br>
-							href="./images/icon.png"<br>
+							content="./icon.png"<br>
 						/&gt<br>
 					&lt/head&gt<br>
 				</span>
 			</div>
 			
-			<div class="section" style="order: 3;">
+			<div class="sectionhalf" style="order: 3;">
 				<p>
-					Por ultimo quisiera recomendarte los frameworks de 
-					&copy<i class="code"><a href="https://www.w3schools.com/">W3SCools</a></i> y
-					&copy<i class="code"><a href="https://getbootstrap.com/">Bootstrap</a></i>, claro
-					una vez que hayas entendido las bases y puedas a provecharlos para agilizar tu
-					desarrollo web. Aunque tambien es muy valido siempre usar <i class="code">css</i>
-					hecho 100% por ti mismo ( ^__^)
+					Muy bien ahora sobre la etiqueta <span class="code">&ltbody&gt</span>, en esta etiqueta colocas todo
+					lo que el usuario vera cuando entre a tu pagina, en este ejemplo se muestra un
+					<span class="code">&lth1&gt</span>, que es el encabezado y el texto con el tamaño mas grande
+					dentro de las paginas web, el titulo de alla arriba que parpadea es un <span class="code">&lth1&gt</span>.
+					Por ultimo se coloca texto regular usando la etiqueta <span class="code">&ltp&gt</span>.
 				</p>
 				<p>
-					Para usar el framework <i class="code"><a href="https://www.w3schools.com/w3css/default.asp">W3.CSS</a></i>
-					lo importas de la misma forma que importas tu archivo <i class="code">css</i>, pero en
-					<i class="code">href</i> escribes <i class="code">href="https://www.w3schools.com/w3css/4/w3.css"</i>
-					y puedes empezar a usar sus clases, las cuales siempre inician con <i class="code">w3-</i>, seguido
-					de una palabra descriptiva, quedando <i class="code">&ltdiv class="w3-row"&gt</i> por ejemplo.
+					Bueno eso es todo lo que coloque en este ejemplo, pero
+					se puede hacer mucho mas y lo veremos en los
+					siguientes capitulos.
 				</p>
-				<p>
-					Muy bien de momento sigamos aprendiendo las bases que necesitamos para poder explotar al maximo
-					nuestra creatividad y no nos veamos limitados por nuestros conocimientos a la hora de plantearnos
-					que construir.
-				</p>
+			</div>
+
+			<div class="section0" style="order: 4;">
+				<span class="code">
+					&ltbody&gt<br>
+						<br>
+						&lth1&gtEncabezado de la pagina/h1&gt<br>
+						&ltp&gtMi primer parrafo.&lt/p&gt<br>
+						<br>
+					&lt/body><br>
+				</span>
 			</div>
 		</div>
 
