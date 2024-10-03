@@ -142,7 +142,7 @@
 		</div>
 		<!-- ------------------------------------- -->
 		<div class="container">
-			<div class="sectionhalf">
+			<div class="sectionhalf" style="order:1">
 				<h2>Aprende HTML desde cero</h2>
 				<h3>como empezar??</h3>
 				<p>
@@ -153,7 +153,7 @@
 					es gratuito y cuenta con mucha funcionalidad, te permite explorar en las carpetas
 					de tu proyecto y le puedes agregar funcionalidad como cutocompletar codigo, puede generar
 					templates de codigo con solo escribir algo como <i class="code">.seccion</i> y pulsar
-					enter para generar un <i class="code">div</i> con <i class="code">class="seccion"</i>,
+					enter para generar un <i class="code">&ltdiv&gt</i> con <i class="code">class="seccion"</i>,
 					por ejemplo.
 				</p>
 				<p>
@@ -162,10 +162,7 @@
 					Cuenta con funcionalidad similar
 					a <a href="https://code.visualstudio.com/" target="blank_">Visual Studio Code</a>,
 					aunque en mi opinion desde la perspectiva de nuevos en programacion ambos son amigables
-					para principiantes y robustos para avanzados ya que te llevan de la mano en tu practica
-					<i class="fa fa-keyboard-o"></i> y con sus funciones avanzadas te ayudan a hacer
-					debugging<i class="fa fa-bug"></i> y testing<i class="fa fa-laptop"></i>, cuando
-					estes listo.
+					para principiantes y robustos para avanzados.
 				</p>
 				<p>
 					Estas son mis recomendaciones pero aun hay mas editores que puedes encontrar como
@@ -173,21 +170,18 @@
 					por mencionar otros.
 				</p>
 			</div>
-			<div class="image">
+
+			<div class="image" style="order:2">
 				<br>
 				<img src="../images/code.png" title="VScode" width="100%" height="auto"></img>
 			</div>
-		</div>
 
-		<div class="container">
-			<div class="image intellij" style="width:auto">
+			<div class="image" style="width:auto; order:3">
 				<h2>IntelliJ IDE</h2>
-				<img src="../images/intellij.png" title="Intellij IDE" width="100% height=auto"></div>
+				<img src="../images/intellij.png" title="Intellij IDE" width="100% height=auto">
 			</div>
-		</div>
-
-		<div class="container">
-			<div id="paragraph" class="sectionhalf" style="order: 1;">
+			<!-- -------------------------------------------------------------------------------- -->
+			<div id="paragraph" class="sectionhalf" style="order: 4;">
 				<p>
 					Muy bien ahora que estas preparado puedes empezar a escribir en HTML. Debes saber que
 					HTML es un lenguaje interpretado, es decir que el buscador lo lee y lo convierte a codigo.
@@ -203,7 +197,8 @@
 					<span class="code">root</span> nos referiremos a <span class="code">&lthtml&gt</span>
 				</p>
 			</div>
-			<div class="section0" style="order: 2;">
+
+			<div class="section0" style="order: 5;">
 				<span class="code">
 					&lt!DOCTYPE html&gt<br>
 					&lthtml&gt<br>
@@ -220,7 +215,7 @@
 				</span>
 			</div>
 
-			<div class="sectionhalf" style="order: 3;">
+			<div class="sectionhalf" style="order: 6;">
 				<p>
 					Dentro de las etiquetas de <span class="code">&lthead&gt</span>
 					se coloca informacion sobre la pagina como titulo; descripcion, con la etiqueta
@@ -235,7 +230,7 @@
 				</p>
 			</div>
 
-			<div class="section0" style="order: 4;">
+			<div class="section0" style="order: 7;">
 				<span class="code">
 					&lthead&gt<br>
 						&lttitle&gt<br>
@@ -258,7 +253,7 @@
 				</span>
 			</div>
 			
-			<div class="sectionhalf" style="order: 5;">
+			<div class="sectionhalf" style="order: 8;">
 				<p>
 					Muy bien ahora sobre la etiqueta <span class="code">&ltbody&gt</span>, en esta etiqueta colocas todo
 					lo que el usuario vera cuando entre a tu pagina, en este ejemplo se muestra un
@@ -273,7 +268,7 @@
 				</p>
 			</div>
 
-			<div class="section0" style="order: 6;">
+			<div class="section0" style="order: 9;">
 				<span class="code">
 					&ltbody&gt<br>
 						<br>
@@ -286,9 +281,9 @@
 		</div>
 
 		<div class="contact">
-			<h2 >Para agendar una entrevista puedes contactarme 
+			<h3>Para agendar una entrevista puedes contactarme 
 				por estos medios
-			</h2><br>
+			</h3>
 			<div class="map"></div>
 			<div class="contact-info">
 				<p>
