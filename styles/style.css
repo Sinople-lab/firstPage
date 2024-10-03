@@ -411,6 +411,7 @@ ul>li:hover .dropdown-content{
     }
     .sectionhalf{width:100%}
     .image{width:100%}
+    .image>h2{display:none}
     .section0{
         margin: 10px 2px 10px;
         width:auto;
@@ -426,7 +427,6 @@ ul>li:hover .dropdown-content{
     }
     .map{display:none}
     .contact>h3{display:none}
-    .contact>h2{display:none}
     .contact-info{
         margin:0px;
         width:100%;
