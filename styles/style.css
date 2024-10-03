@@ -273,7 +273,7 @@ ul>li:hover .dropdown-content{
 }
 /* ---------------------------------------- */
 .container{
-    border:solid 2px white;
+    /* border:solid 2px white; */
     display: flex;
     margin-left:18vw;
     flex-direction:row;
@@ -379,7 +379,7 @@ ul>li:hover .dropdown-content{
     100%{opacity:1}
 }
 @media only screen and (max-device-width:800px){
-    .glowing-txt{font-size: 4rem;}
+    .glowing-txt{font-size: 4.5rem;}
     p{font-size:0.9em}
     #smallh{display:block;}
     #bigh{display:none;}
@@ -388,6 +388,7 @@ ul>li:hover .dropdown-content{
     .navbar{display:none}
     .navbar>ul{margin:0 0 0 0;}
     .sidemenu{display:none;}
+    .embed{width:100%;height:34vh}
     .header{
         display:flex;
         justify-content:center;
@@ -399,6 +400,7 @@ ul>li:hover .dropdown-content{
     .section{
         padding: 3vh 7vw;
         margin: 1vh 1vw;
+        width:100%;
     }
     .sectionhalf{width:100%}
     .image{width:100%}
