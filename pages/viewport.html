@@ -143,38 +143,28 @@
 
 		<!-- ------------------------------------- -->
 		<div class="container">
-			<div class="sectionhalf">
-				<h2>Aprende CSS desde cero</h2>
-				<h3>Que es CSS??</h3>
+			
+			<div class="sectionhalf" style="order:1">
+				<h3>Que es viewport?? <i class="material-icons" style="font-size:1em">devices</i></h3>
 				<p>
-					Primero necesitas un editor. No es necesario tener un editor muy ostentoso,
-					de hecho podrias usar notepad de windows, sin embargo quisiera
-					sugerirte algunas opciones. <i class="fa fa-th"></i><br> La primera es 
-					&copy<a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>,
-					es gratuito y cuenta con mucha funcionalidad, te permite explorar en las carpetas
-					de tu proyecto y le puedes agregar funcionalidad como cutocompletar codigo, puede generar
-					templates de codigo con solo escribir algo como <i class="code">.seccion</i> y pulsar
-					enter para generar un <i class="code">div</i> con <i class="code">class="seccion"</i>,
-					por ejemplo.
+					El <i class="code">viewport</i> es el area de la pantalla de tu dispositivo en la
+					cual se muestra	la pagina web. Es decir que no es el tamaño de tu pantalla, sino de
+					un area especifica.
 				</p>
 				<p>
-					Otra buena opcion es 
-					&copy<a href="https://www.jetbrains.com/idea/" target="_blank">IntelliJ IDE</a>.
-					Cuenta con funcionalidad similar
-					a <a href="https://code.visualstudio.com/" target="blank_">Visual Studio Code</a>,
-					aunque en mi opinion desde la perspectiva de nuevos en programacion ambos son amigables
-					para principiantes y robustos para avanzados ya que te llevan de la mano en tu practica
-					<i class="fa fa-keyboard-o"></i> y con sus funciones avanzadas te ayudan a hacer
-					debugging<i class="fa fa-bug"></i> y testing<i class="fa fa-laptop"></i>, cuando
-					estes listo.
+					Cuando programas una pagina web, y la visualizas en un <i class="code">viewport</i>
+					de dispositivos mobiles, notas que esta se escala para ajustarse al ancho de tu
+					pantalla. Esto hace que se vea como una pagina para PC pero en miniatura, cuando
+					la idea es que se vea de forma adecuada para la orientacion y tamaño de tu dispositivo.
 				</p>
 				<p>
-					Estas son mis recomendaciones pero aun hay mas editores que puedes encontrar como
-					<a href="https://brackets.io/?lang=en">Brackets</a>, <a href="https://www.geany.org/">Geany</a>,
-					por mencionar otros.
+					La solucion a esto se conoce como diseño y desarrollo responsivo y el primer paso
+					para conseguirla es declarando en <i class="code">html</i> que el ancho del viewport
+					sea igual al ancho que se detecte en el dispositivo.
 				</p>
 			</div>
-			<div class="embed">
+
+			<div class="embed" style="order:2">
 				<iframe
 					width="100%"
 					height="100%"
@@ -184,113 +174,20 @@
 					allowfullscreen
 				></iframe>
 			</div>
-		</div>
-
-		<div class="container">
-			<div class="image intellij" style="width:auto">
-				<h2>IntelliJ IDE</h2>
-				<img src="../images/intellij.png" title="Intellij IDE" width="100% height=auto"></div>
-			</div>
-		</div>
-
-		<div class="container">
-			<div id="paragraph" class="sectionhalf">
+		
+			<div class="section" style="order:3">
 				<p>
-					Muy bien ahora que estas preparado puedes empezar a escribir en HTML. Debes saber que
-					HTML es un lenguaje interpretado, es decir que el buscador lo lee y lo convierte a codigo.
-					Esto se hace para mantener un estandar que sea igual independientemente de que buscador se use,
-					por ello cuando empiezas a escribir debes indicar el tipo de documento con la etiqueta
-					<code>&lt!DOCTYPE html&gt</code>. HTML viene de HyperText Markup Language(Lenguaje de Marcas de
-					Hipertexto) es decir esas etiquetas que vez aqui rodeadas por "&lt" y "&gt".
+					Dentro de <i class="code">&lthead&gt</i> se escribe una etiqueta
+					<i class="code">&ltlink&gt</i>, en la cual se declara
+					<i class="code">"viewport"</i> en <i class="code">rel</i> y dentro de
+					<i class="code">content</i> se declara <i class="code">"width=device-with"</i>.
+					Con esto las dimensiones de fuente y unidades de medida se adaptaran al ancho
+					del dispositivo, logrando mejor visibilidad del contenido. Por ultimo, dentro
+					de los parametros de <i class="code">content</i> se agrega
+					<i class="code">, initial-scale=1.0</i> para indicar que no habra ningun "zoom"
+					o, en otras palabras, no se multiplicara la escala de los componentes dentro
+					de la pagina web.
 				</p>
-				<p>
-					En este ejemplo de <span class="code">html</span> que te muestro esta la etiqueta &lthtml&gt,
-					esta etiqueta debe envolver todo el codigo a excepcion de &ltDOCTYPE html&gt, a &lthtml&gt tambien
-					se le conore como el <span class="code">root element</span>, mas adelante cuando se mencione a
-					<span class="code">root</span> nos referiremos a <span class="code">&lthtml&gt</span>
-				</p>
-			</div>
-			<div class="section0">
-				<span class="code">
-					&lt!DOCTYPE html&gt<br>
-					&lthtml&gt<br>
-						&lthead&gt<br>
-							&lttitle&gt<br>
-							Titulo del sitio<br>
-							&lt/title&gt<br>
-						&lt/head&gt<br>
-						&ltbody&gt<br>
-							&lth1&gtEncabezado de la pagina&lt/h1&gt<br>
-							&ltp&gtMi primer parrafo.&lt/p&gt<br>
-						&lt/body><br>
-					&lt/html>
-				</span>
-			</div>
-		</div>
-
-		<div class="container">
-			<div class="sectionhalf" style="order: 1;">
-				<p>
-					Dentro de las etiquetas de <span class="code">&lthead&gt</span>
-					se coloca informacion sobre la pagina como titulo; descripcion, con la etiqueta
-					<span class="code">&ltmeta&gt</span>; logo, con la etiqueta <span class="code">&ltlink&gt</span>;
-					enlaces a hojas de estilo, tambien con <span class="code">&ltlink&gt</span>, es
-					decir archivos de extension <span class="code">.css</span> ya sea locales, dentro de nuestros folders de proyecto, o provenientes
-					de paginas web externas como &copy<a href="https://www.w3schools.com/default.asp">W3Schools</a>
-					y &copy<a href="https://getbootstrap.com/">Bootstrap</a>. Como puedes ver dentro de
-					<span class="code">&ltlink&gt</span> se escribe <span class="code">rel=""</span>, donde se indica
-					la relacion que tiene aquello a lo que estamos haciendo referencia, y en <span class="code">href=""</span>
-					escribimos la url del archivo del cual vamos a tomar contenido.
-				</p>
-			</div>
-
-			<div class="section0" style="order: 2;">
-				<span class="code">
-					&lthead&gt<br>
-						&lttitle&gt<br>
-						Titulo del sitio<br>
-						&lt/title&gt<br>
-						&ltmeta<br>
-							name="Pagina didactica" <br>
-							content="Sitio web para aprender las bases de programacion web"<br>
-						/&gt<br>
-						<br>
-						&ltlink<br>
-							rel="stylesheet"<br>
-							content="./style.css"<br>
-						/&gt<br>
-						&ltlink<br>
-							rel="logo"<br>
-							content="./icon.png"<br>
-						/&gt<br>
-					&lt/head&gt<br>
-				</span>
-			</div>
-			
-			<div class="sectionhalf" style="order: 3;">
-				<p>
-					Muy bien ahora sobre la etiqueta <span class="code">&ltbody&gt</span>, en esta etiqueta colocas todo
-					lo que el usuario vera cuando entre a tu pagina, en este ejemplo se muestra un
-					<span class="code">&lth1&gt</span>, que es el encabezado y el texto con el tamaño mas grande
-					dentro de las paginas web, el titulo de alla arriba que parpadea es un <span class="code">&lth1&gt</span>.
-					Por ultimo se coloca texto regular usando la etiqueta <span class="code">&ltp&gt</span>.
-				</p>
-				<p>
-					Bueno eso es todo lo que coloque en este ejemplo, pero
-					se puede hacer mucho mas y lo veremos en los
-					siguientes capitulos.
-				</p>
-			</div>
-
-			<div class="section0" style="order: 4;">
-				<span class="code">
-					&ltbody&gt<br>
-						<br>
-						&lth1&gtEncabezado de la pagina/h1&gt<br>
-						&ltp&gtMi primer parrafo.&lt/p&gt<br>
-						<br>
-					&lt/body><br>
-				</span>
 			</div>
 		</div>
 
