@@ -126,6 +126,7 @@ a{
     margin: 2vh 1vw 2.3vh 2vw;
     padding: 3vh 0 3vh;
 }
+.embedbig{width:80%}
 /* ////////////////////////////////////////////////// */
 /* ---------------  big navbar ------------ */
 .navbar{
@@ -289,7 +290,7 @@ ul>li:hover .dropdown-content{
     text-align: justify;
     height:auto;
     padding:1vh 2vw 3vh 1.3vw;
-    margin: 1vh 5vw 2vh 4.3vw;
+    margin: 2vh 5vw 2vh 4.3vw;
     border-radius: 20px;
 }
 .section > p{
@@ -395,7 +396,12 @@ ul>li:hover .dropdown-content{
     .navbar{display:none}
     .navbar>ul{margin:0 0 0 0;}
     .sidemenu{display:none;}
-    .embed{width:100%;height:34vh}
+    .embed{
+        width:100%;
+        height:34vh;
+        margin:1vh 1vw;
+    }
+    .embedbig{width:100%;margin:1vh 1vw}
     .header{
         display:flex;
         justify-content:center;
@@ -409,7 +415,11 @@ ul>li:hover .dropdown-content{
         margin: 1vh 0vw;
         width:88%;
     }
-    .sectionhalf{width:100%}
+    .sectionhalf{
+        padding: 3vh 7vw;
+        margin: 1vh 0vw;
+        width:100%
+    }
     .image{width:100%}
     .image>h2{display:none}
     .section0{
