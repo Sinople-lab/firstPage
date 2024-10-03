@@ -399,8 +399,8 @@ ul>li:hover .dropdown-content{
     .container{margin:0;}
     .section{
         padding: 3vh 7vw;
-        margin: 1vh 0.3vw;
-        width:100%;
+        margin: 1vh 0vw;
+        width:90%;
     }
     .sectionhalf{width:100%}
     .image{width:100%}
