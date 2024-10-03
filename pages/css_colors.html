@@ -13,6 +13,7 @@
 		/>
 		<link rel="icon" href="../images/icon.jpg" />
 
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"> -->
 
@@ -45,15 +46,10 @@
 				text-align: left;
 				list-style-position: inside;
 			}
-			.glowing-txt::before{
-				width:90vw;
-				transform:translate(-10%, 430%) rotatex(50deg) scale(0.7, 1);
-			}
 		</style>
 	</head>
 
-	<body>
-		
+	<body>		
 		<!-- //////////////// small menu /////////// -->
 		<div class="smallmenu">
 			<i class="fa fa-bars"></i>
@@ -140,163 +136,66 @@
 		</div>
 
 		<!-- //////////////// HEADER ////////////////-->
-		<div class="header" >
-			<h1 class="glowing-txt" style="" id="bigh">Padding & Margin</h1>
-			<h1 class="glowing-txt" id="smallh"><i class="fa fa-window-maximize"></i></h1>		
+		<div class="header">
+			<h1 class="glowing-txt" id="bigh">Color</h1>
+			<h1 class="glowing-txt" id="smallh"><i class="material-icons" style="font-size:1.3em">format_color_fill</i></h1>		
 		</div>
 
 		<!-- ------------------------------------- -->
 		<div class="container">
+			
 			<div class="sectionhalf" style="order:1">
-				<h2>Relleno y Magen</h2>
+				<h3>Como usar color en CSS <i class="material-icons" style="font-size:1em">format_color_fill</i></h3>
 				<p>
-					Esta imagen es un box model, o modelo de caja/contenedor, la traduccion no es muy exacta
-					pero se entiende como el modelo de contenedor para un <i class="code">&ltdiv&gt</i>
-					determinado. En este modelo se muestran los valores de espacio
-					que ocupa el <i class="code">&ltdiv&gt</i> empezando de adentro hacia afuera,
-					el area interna de color azul representa el espacio que ocupa el contenido en si,
-					el area intermedia de color morado representa al <i class="code">padding</i> (relleno) y el area de color
-					verde es <i class="code">margin</i> (margen).
+					El <i class="code">viewport</i> es el area de la pantalla de tu dispositivo en la
+					cual se muestra	la pagina web. Es decir que no es el tamaño de tu pantalla, sino de
+					un area especifica.
 				</p>
 				<p>
-					<i class="code">Margin</i> no es afectado por las propiedades de
-					<i class="code">css</i> que le agregues
-					a un <i class="code">&ltdiv&gt</i>, solo por las propiedades de
-					<i class="code">margin</i>, ya que 	esta area es el espacio entre
-					<i class="code">&ltdiv&gt</i> y el <i class="code">border</i> mas cercano. Como
-					se puede ver en <i class="code">box model</i>, entre <i class="code">padding</i> y
-					<i class="code">margin</i> hay una linea con la leyenda de <code>border</code> ya que
-					este es el limite exterior de <i class="code">&ltdiv&gt</i> y no la linea externa
-					del <i class="code">box model</i> que se ve en la imagen.
+					Cuando programas una pagina web, y la visualizas en un <i class="code">viewport</i>
+					de dispositivos mobiles, notas que esta se escala para ajustarse al ancho de tu
+					pantalla. Esto hace que se vea como una pagina para PC pero en miniatura, cuando
+					la idea es que se vea de forma adecuada para la orientacion y tamaño de tu dispositivo.
+				</p>
+				<p>
+					La solucion a esto se conoce como diseño y desarrollo responsivo y el primer paso
+					para conseguirla es declarando en <i class="code">html</i> que el ancho del viewport
+					sea igual al ancho que se detecte en el dispositivo.
 				</p>
 			</div>
 
-			<div class="image" style="order:2">
-				<img
-					title="box model"
-					width="80%"
-					height="auto"
-					src="../images/boxmodel.png"
-				></img>
-			</div>
-			<!-- --------------------------------------------------------------------- -->
-			<div class="embed embedbig" style="order:3">
+			<div class="embed" style="order:2">
 				<iframe
 					width="100%"
 					height="100%"
-					src="https://www.youtube.com/embed/hKki20sq1FY?autoplay=0&loop=0&autopause=1"
+					src="https://www.youtube.com/embed/GZ5nA7CkMEU?autoplay=0&loop=0&autopause=1"
 					frameborder="0"
 					referrerpolicy="strict-origin-when-cross-origin"
-					allow="fullscreen"
+					allowfullscreen
 				></iframe>
 			</div>
-
-			<div class="sectionhalf" style="order:4">
+		
+			<div class="section" style="order:3">
 				<p>
-					Para poder aplicarle estilos a un <i class="code">&ltdiv&gt</i> se le debe de
-					asignar una clase de <i class="code">css</i>, esta clase es personalizada y se
-					declara en el <i class="code">stylesheet</i> con el mobre que le quieras poner,
-					empezando con un "." y si generas el div usando
-					<i class="code"><a href="https://code.visualstudio.com/">VScode</a></i> solo escribes
-					"." seguido del nombre que le des a la clase y pulsas <code>ENTER</code>.
-				</p>
-				<p>
-					Aqui te dejo el codigo que se usa para declarar la propiedades para un
-					<i class="code">&ltdiv&gt</i> de classe <i class="code">block</i>. Como puedes ver,
-					le agregue un <i class="code">></i> para indicar que las clases <i class="code">h1</i>
-					y <i class="code">p</i> son hijas de la clase <i class="code">.block</i>
-				</p>
-			</div>
-
-			<div class="section0" style="order:5">
-				<span class="code">
-					body{background-color:rgba(0,0,0,1);}<br>
-					.block{<br>
-						border: 3px solid white;<br>
-					}<br>
-					.block > h1{<br>
-						border: 3px solid white;<br>
-						color: beige;<br>
-					}<br>
-					.block > p{<br>
-						border: 3px solid white;<br>
-						font-family:Arial;<br>
-						color:whitesmoke<br>
-					}<br>
-				</span>
-			</div>
-
-			<div class="sectionhalf" style="order: 6;">
-				<p>
-					Ahora, estas son las diferentes formas de definir un <i class="code">padding</i>,
-					se pueden declarar los valores para cada una de las 4 direcciones o se pueden
-					declarar los 4 valores en la propiedad <i class="code">padding</i>.
-				</p>
-			</div>
-
-			<div class="section0" style="order: 8;">
-				<span class="code">
-					/*  declarar los valores por separado */<br>
-					.block{<br>
-						padding-top: ;<br>
-						padding-left: ;<br>
-						padding-bottom: ;<br>
-						padding-right: ;<br>					
-					}<br>
-				</span>
-			</div>
-			<!-- ---------------------------------------------------------------------- -->
-			<div class="section0" id="big0" style="order: 9;width:100%;margin: 1vh 5.5vw 1vh 4.3vw;">
-				<span class="code">
-					/*  declarar los valores en una linea */<br>
-					.block{<br>
-						padding: x ; /* 4 valores = x */<br>
-						padding: x y ; /* top,bottom = x | left,right = y */<br>
-						padding: x y z ; /* top = x | left,right = y | bottom = z */<br>
-						padding: x y z w; /* top = x | left = y | bottom = z | right = w */<br>					
-					}<br>
-				</span> 
-			</div>
-			<div class="section0" id="small0" style="order: 9;">
-				<span class="code" style="font-size:0.9em">
-					/*  declarar los valores en una linea */<br>
-					.block{<br>
-						padding:x ;/* 4 valores = x */<br>
-						<br>
-						/* top,bottom = x | left,right = y */<br>
-						padding:x y ;<br>
-						<br>
-						/* top =x | left,right = y | bottom = z */<br>
-						padding:x y z ;<br>
-						<br>
-						/* top =x | left = y | bottom = z | right = w */<br>
-						padding:x y z w;<br>					
-					}<br>
-				</span>
-			</div>
-			<!-- ------------------------------------------------------------------------------ -->
-
-			<div class="section" style="order:10">
-				<p>
-					Para <i class="code">margin</i> se declaran los valores de la misma forma que
-					en <i class="code">padding</i>, ya sea por separado o dentro de la propiedad
-					<i class="code">margin</i> y siguiendo la misma sintaxis.
-				</p>
-				<p>
-					En el video se muestra como, al modificar estos valores, se modifica la distancia
-					entre el borde del <i class="code">&ltdiv&gt</i> y los bordes de contenedores vecinos
-					o con el borde del contenedor padre.
+					Dentro de <i class="code">&lthead&gt</i> se escribe una etiqueta
+					<i class="code">&ltlink&gt</i>, en la cual se declara
+					<i class="code">"viewport"</i> en <i class="code">rel</i> y dentro de
+					<i class="code">content</i> se declara <i class="code">"width=device-with"</i>.
+					Con esto las dimensiones de fuente y unidades de medida se adaptaran al ancho
+					del dispositivo, logrando mejor visibilidad del contenido. Por ultimo, dentro
+					de los parametros de <i class="code">content</i> se agrega
+					<i class="code">, initial-scale=1.0</i> para indicar que no habra ningun "zoom"
+					o, en otras palabras, no se multiplicara la escala de los componentes dentro
+					de la pagina web.
 				</p>
 			</div>
 		</div>
 
 		<div class="contact">
-			<h3>Para agendar una entrevista puedes contactarme 
+			<h3 >Para agendar una entrevista puedes contactarme 
 				por estos medios
 			</h3>
-
 			<div class="map"></div>
-
 			<div class="contact-info">
 				<p>
 					<i class="fa fa-map-marker fa-fw" style="margin:4px 0 0 ; color:tomato"></i> Boston, Massachusetts<br>
