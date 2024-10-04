@@ -239,11 +239,11 @@ ul>li:hover .dropdown-content{
 /* -------------------- side menu -------------------- */
 .sidemenu{
     position:fixed;
-    top:8vh;
+    top:8.4vh;
     left:0px;
     width:13vw;
     padding:20px 40px 10px 10px;
-    height:68vh;
+    height:74vh;
     overflow: scroll;
     overflow-x: hidden;
     background-color: #6e6ea0cc;
