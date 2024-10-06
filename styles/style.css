@@ -415,8 +415,8 @@ ul>li:hover .dropdown-content{
     .header{
         display:flex;
         justify-content:center;
-        padding-top: 1vh;
-        padding-bottom:2vh;
+        padding-top: 3vh;
+        padding-bottom:3vh;
         margin:1vh 0 0 0;
     }
     .directions{
