@@ -48,7 +48,7 @@
     order:2;
     height: 76vh;
     width: 70vw;
-    overflow-y: hidden;
+    overflow-y: visible;
 
     /* ---------- x scroll enable ----------- */
     display: flex;
@@ -90,11 +90,11 @@
     transform:translate(-1%, 430%) rotatex(50deg) scale(0.7, 2);
 }
 #html >.glowing-txt>a{
-    color: #fc0000;
+    color: #ff0000;
 
 }
 #html > h1{
-    text-shadow:0px 0px 0.1em #cf0000;
+    text-shadow:0px 0px 0.1em #ff0000;
 }
 #html > .glowing-txt::before{
     background-color:#ff0000
