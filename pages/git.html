@@ -53,7 +53,8 @@
 		<!-- //////////////// small menu /////////// -->
 		<div class="smallmenu">
 			<i class="fa fa-bars"></i>
-			<h2 style="color:tomato"><i class="fa fa-css3"></i> CSS / html</h2>
+			<div class="smallmenu-content">
+				<h2 style="color:tomato"><i class="fa fa-css3"></i> CSS / html</h2>
 				<a href="./desdeCero.html">html desde cero</a>
 				<a href="./css.html">CSS</a>
 				<a href="./padding.html">padding & margin</a>
@@ -202,62 +203,94 @@
 					allowfullscreen
 				></iframe>
 			</div>
-			
-			<div class="section" style="order:6">
+			<div class="section" style="order:4">
 				<p>
-					Para <i class="code">rgb</i> y <i class="code">hsl</i> puedes agregar un parametro extra
-					que es α. Para esto renombras <i class="code">rgb</i> como <i class="code">rgba</i> y
-					<i class="code">hsl</i> como <i class="code">hsla</i> y agragas este parametro al final,
-					por ejemplo <i class="code">hsla(60,100%,40%,0.5)</i> para conseguir el mismo color pero
-					con una transparencia de 50%. Y para el caso de hexadecimal utilizas la propiedad
-					<i class="code">opacity</i> para manipular el α.
+					Para empezar a trabajar con un repositorio primero hay que crearlo en github 
+					<i class="fa fa-github"></i>. Para este ejemplo cree un repositorio llamado
+					test, en la creacion solo asigne el nombre y di click en "Create repository".
+				</p>
+				<p>
+					Tambien cree un <i class="code">access token</i>. Para crear uno das click en tu foto,
+					settings, en el menu de la izquierda bajas hasta abajo y das click en "Developer settings",
+					luego das click en "Personal acces token" y click en "Tokens (classic)". Se abrira
+					la pagina para administrar los tokens y aqui puedes dar click en "generar nuevo token"
+					y escoges "Generate new token (classic)", te recomiendo siempre que en la creacion del
+					token le agregues algo a la nota para que recuerdes para que usabas el token.
+				</p>
+			</div>
+			<div class="sectionhalf" style="order:5">
+				<p>
+					Cuando se haya terminado de instalar <i class="fa fa-git-square"></i> podemos
+					proceder a agregar archivos a un repositorio. Si usas windows puedes abrir
+					<i class="code">git bash</i> para poder usar los comandos libremente sin tener
+					que configurar <i class="code">PowerShell</i> o <i class="code">CMD</i>.
+				</p>
+				<p>
+					Una vez abierto <i class="code">Git bash</i>, o la terminal que prefieras usar,
+					procedemos a inicializar el repositorio escribiendo estas lineas de comando.
+					Empezamos con la creacion del archivo README.md, que va a contener una descripcion
+					de tu proyecto.
+					Escribes <i class="code">echo</i> seguido de <i class="code">""</i> en las que
+					escribes la primera linea del archivo que desees agregar y el comando termina con
+					<i class="code">>> README.md</i> con lo que asignas nombre al archivo.
 				</p>
 			</div>
 
-			<div class="sectionhalf" style="order:7">
-				<p>
-					Te recomiendo es determinar tu paleta de colores y asignas nombres a cada color.
-					En este proyecto tengo esta paleta de colores que usare para construir el sitio web y
-					declaro los nombres dentro de <i class="code">:root{}</i>, con esto indico que estas
-					variables seran de alcance global, es decir que
-					estaran disponibles para todas las clases dentro del archivo <i class="code">css</i>.
-					Para usar
-					un color dentro de tu paleta de colores lo asignas usando la funcion
-					<i class="code">var()</i> y dentro de los parentesis escribes el nombre del color
-					que quieras usar, por ejemplo <i class="code">background-color:var(--main-color)</i>.
-					<i class="code">var()</i> se usa siempre que se quiere utilizar el valor
-					de una variable como parametro para una propiedad de <i class="code">css</i>.
-				</p>
-				<p>
-					Por ultimo quisiera recomendarte el
-					<a href="https://www.w3schools.com/colors/colors_picker.asp">Color picker</a>
-					de &copy<a href="https://www.w3schools.com/">W3Schools</a>,
-					es muy practico a la hora de elegir tu paleta de colores. No es que yo trabaje para
-					ellos, este proyecto es completamente independiente y solo lo hago porque me gusta
-					enseñar lo que se y ayudar a otros.
-				</p>
-			</div>
-			<div class="section0" style="order:8">
+			<div class="section0" style="order:6">
 				<span class="code">
 					<br>
-					:root {<br>
-						--color-main: #71c6dd;<br>
-						--color-main-light: #e1f6fb;<br>
-						--color-dark: #3f4156;<br>
-						--color-dark-medium: #51546e;<br>
-						--color-dark-light: #696d97;<br>
-						--color-light: #e5e5e5;<br>
-						--color-gray: #8b8b8b;<br>
-						--color-light-gray: #b2bdbd;<br>
-						--color-bg: #2d2d39;<br>
-						--color-success: #5dd693;<br>
-						--color-error: #fc4b0b;<br>
-						--color-glow:#61efff;<br>
-					}<br>
+					<br>
+					pc@user:~/Documents/repo$ echo "# test" >> README.md<br>
+					pc@user:~/Documents/repo$git init<br>
+					pc@user:~/Documents/repo$git add README.md<br>
+					pc@user:~/Documents/repo$git commit -m "first commit"<br>
+					pc@user:~/Documents/repo$git branch -M main<br>
+					<br>
 				</span>
 			</div>
-		</div>
 
+			<div class="section" style="order:7">
+				<p>
+					Con las siguiente linea se inicializa <i class="fa fa-git"></i>, es decir se crean
+					los archivos y directorios que se encargaran de registrar las snapshots que se tomen
+					asi como de las <i class="code">branch</i> que creas.
+					En la cuarta linea estas especificando que vas a agregar README.md al repositorio,
+					de hecho puede que edites mas archivos pero mientras no lo especificas en este comando
+					no se tomaran en cuenta en el <i class="code">commit</i>. Otra alternativa es escribir
+					<i class="code">git add -A</i>, con lo que indicas que vas a agregar todos los
+					cambios que hayas realizado en el directorio.
+					La cuarta linea es con la que se crea el snapshot del estado del
+					proyecto o el <i class="code">commit</i> en si,
+					aqui se agregan los cambios que hayas hecho al repositorio local. Y con
+					la quinta linea especificas que cuando se carguen los archivos a github se hara
+					en <i class="code">main branch</i> o puedes especificar otra rama.
+				</p>
+			</div>
+
+			<div class="section0" style="order:9">
+				<span class="code">
+					<br>
+					<br>
+					pc@user:~/Documents/repo$git remote add origin https://github.com/Sinople-lab/test.git<br>
+					pc@user:~/Documents/repo$git push -u origin main<br>
+					<br>
+				</span>
+			</div>
+
+			<div class="sectionhalf" style="order:8">
+				<p>
+					Por ultimo agregas <i class="code">origin</i>, que es con lo que enlazas el repositorio
+					en github con tu repositorio local. Sin embargo en la direccion del repositorio vas
+					a agregar el token que generaste, se agrega despues de <i class="code">https://</i>
+					y al final del token escribes @ antes del resto de la <i class="code">url</i>. Ahora
+					con el ultimo comando se hace un <i class="code">push</i> o, en otras palabras,
+					se envian los archivos a github sincronizando asi tu proyecto con el repositorio
+					en linea.
+				</p>
+			</div>
+
+		</div>
+		
 		<div class="contact">
 			<h3 >Para agendar una entrevista puedes contactarme 
 				por estos medios
