@@ -96,9 +96,6 @@
     background-color:#f0db4f
 }
 /* ----------------------------------------------- */
-.main>.links{
-    display: none;
-}
 .previous{
     display: none;
     order:1;
@@ -136,10 +133,6 @@
 .main-contact>.contact{
     margin:1vh 1vw;
 }
-/* --------------------- footer -------------- */
-.footer{
-    width:100%;
-}
 /* ////////////////// mobile ////////////////// */
 @media only screen and (max-device-width:800px){
     .main{
@@ -148,10 +141,9 @@
         padding-bottom: 0;
         flex-direction: column;
     }
-    .main>.links{display: block;}
     .block{display: none;}
     .wrapper{
-        height:31vh;
+        height:28vh;
         width: 100%;
         flex-direction: column;
         overflow-y: auto;
