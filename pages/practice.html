@@ -3,7 +3,7 @@
 	<head>
 		
 		<title>
-			color en html
+			practicar
 		</title>
 		
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -61,7 +61,7 @@
 				<a href="./viewport.html">Viewport</a>
 				<a href="./css_colors.html">Color</a>
 				<a href="./git.html">Git & github</a>
-				<a href="./practice.html">Estilos & colores</a>
+				<a href="./practice.html">Practicar</a>
 				<a href="./th.html">Listas & Tablas</a>
 				<a href="./dom.html">DOM</a>
 				<a href="./navbar.html">Navbar</a>
@@ -121,7 +121,7 @@
 				<li><a href="./viewport.html">Viewport</a></li>
 				<li><a href="./css_colors.html">Color</a></li>
 				<li><a href="./git.html">Git & github</a></li>
-				<li><a href="./practice.html">Estilos personalizado</a></li>
+				<li><a href="./practice.html">Practicar</a></li>
 				<li><a href="./th.html">Listas & Tablas</a></li>
 				<li><a href="./dom.html">DOM</a></li>
 				<li><a href="./navbar.html">Navbar</a></li>
@@ -141,15 +141,15 @@
 
 		<!-- //////////////// HEADER ////////////////-->
 		<div class="header">
-			<h1 class="glowing-txt" id="bigh">Color</h1>
-			<h1 class="glowing-txt" id="smallh"><i class="material-icons" style="font-size:1.3em">format_color_fill</i></h1>
+			<h1 class="glowing-txt" id="bigh">Practicar</h1>
+			<h1 class="glowing-txt" id="smallh"><i class="fa fa-keyboard-o" style="font-size:1.3em"></i></h1>
 		</div>
 
 		<!-- ------------------------------------- -->
 		<div class="container">
 			
-			<div class="section" style="order:1">
-				<h3>Como usar color en CSS <i class="material-icons" style="font-size:1em;color:#cccc00">format_color_fill</i></h3>
+			<div class="sectionhalf" style="order:1">
+				<h3>Vamos a aplicar lo aprendido <i class="code"><i class="fa fa-keyboard-o"></i></i></h3>
 				<p>
 					En <i class="code">html5</i> hay difernetes formas de declarar un color, la mas simple es
 					escribir el nombre del color, por ejemplo escribies <i class="code">background-color:red</i>
@@ -177,37 +177,8 @@
 					<i class="code">hsl(60, 100%, 40%)</i>.
 				</p>
 			</div>
-			<!-- ---------------------- charts ----------------------- -->
-			<div class="image" style="order: 2;width: 40vh;">
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/hexcolor.png"
-				/>
-			</div>
-
-			<div class="image" style="order: 3;width: 40vh;">
-				<h2>RGB color</h2>
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/rgb.png"
-				/>
-			</div>
-
-			<div class="image" style="order: 4;width: 40vh;">
-				<h2>Hue wheel</h2>
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/colorWheel.png"
-				/>
-			</div>
 			<!-- -------------- video ----------------- -->
-			<div class="embed embedbig" style="order:5">
+			<div class="embed" style="order:2">
 				<iframe
 					width="100%"
 					height="100%"
@@ -216,62 +187,6 @@
 					referrerpolicy="strict-origin-when-cross-origin"
 					allowfullscreen
 				></iframe>
-			</div>
-			
-			<div class="section" style="order:6">
-				<p>
-					Para <i class="code">rgb</i> y <i class="code">hsl</i> puedes agregar un parametro extra
-					que es α. Para esto renombras <i class="code">rgb</i> como <i class="code">rgba</i> y
-					<i class="code">hsl</i> como <i class="code">hsla</i> y agregas este parametro al final,
-					por ejemplo <i class="code">hsla(60,100%,40%,0.5)</i> para conseguir el mismo color pero
-					con una transparencia de 50%. Y para el caso de hexadecimal utilizas la propiedad
-					<i class="code">opacity</i> para manipular el α.
-				</p>
-			</div>
-
-			<div class="sectionhalf" style="order:7">
-				<p>
-					Te recomiendo determinar tu paleta de colores y asignas nombres a cada color.
-					En este proyecto tengo esta paleta de colores que usare para construir el sitio web y
-					declaro los nombres dentro de <i class="code">:root{}</i>, con esto indico que estas
-					variables seran de alcance global, es decir que
-					estaran disponibles para todas las clases dentro del archivo <i class="code">css</i> ya
-					que <i class="code">root</i> hace referencia a <i class="code">html</i>, como te
-					mencione en el primer capitulo.
-					Para usar
-					un color dentro de tu paleta de colores lo asignas usando la funcion
-					<i class="code">var()</i> y dentro de los parentesis escribes el nombre del color
-					que quieras usar, por ejemplo <i class="code">background-color:var(--color-main)</i>.
-					<i class="code">var()</i> se usa siempre que se quiere utilizar el valor
-					de una variable como parametro para una propiedad de <i class="code">css</i>.
-				</p>
-				<p>
-					Por ultimo quisiera recomendarte el
-					<a href="https://www.w3schools.com/colors/colors_picker.asp">Color picker</a>
-					de &copy<a href="https://www.w3schools.com/">W3Schools</a>,
-					es muy practico a la hora de elegir tu paleta de colores. No es que yo trabaje para
-					ellos, este proyecto es completamente independiente y solo lo hago porque me gusta
-					enseñar lo que se y ayudar a otros.
-				</p>
-			</div>
-			<div class="section0" style="order:8">
-				<span class="code">
-					<br>
-					:root {<br>
-						--color-main: #71c6dd;<br>
-						--color-main-light: #e1f6fb;<br>
-						--color-dark: #3f4156;<br>
-						--color-dark-medium: #51546e;<br>
-						--color-dark-light: #696d97;<br>
-						--color-light: #e5e5e5;<br>
-						--color-gray: #8b8b8b;<br>
-						--color-light-gray: #b2bdbd;<br>
-						--color-bg: #2d2d39;<br>
-						--color-success: #5dd693;<br>
-						--color-error: #fc4b0b;<br>
-						--color-glow:#61efff;<br>
-					}<br>
-				</span>
 			</div>
 		</div>
 
