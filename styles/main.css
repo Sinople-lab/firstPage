@@ -151,7 +151,7 @@
     .main>.links{display: block;}
     .block{display: none;}
     .wrapper{
-        height:27vh;
+        height:30vh;
         width: 100%;
         flex-direction: column;
         overflow-y: auto;
