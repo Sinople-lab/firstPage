@@ -83,7 +83,8 @@
     text-shadow:0px 0px 0.1em #ff0000;
 }
 #html > .glowing-txt::before{
-    background-color:#ff0000
+    background-color:#ff00cf;
+    opacity: 1;
 }
 #js> .glowing-txt>a{
     color: #f0db4f;
