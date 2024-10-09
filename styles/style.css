@@ -271,7 +271,7 @@ ul>li:hover .dropdown-content{
     /* border-top-right-radius: 20px;
     border-top-left-radius:20px; */
 }
-#smallh{
+.smallh{
     display:none;
 }
 .header > a{
@@ -401,8 +401,8 @@ ul>li:hover .dropdown-content{
 }
 @media only screen and (max-device-width:800px){
     p{font-size:0.9em}
-    #smallh{display:block;}
-    #bigh{display:none;}
+    .smallh{display:block;}
+    .bigh{display:none;}
     .glowing-txt{font-size: 4.5rem;}
     .glowing-txt::before{display:none;}
     .smallmenu{display:block}
