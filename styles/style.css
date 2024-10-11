@@ -74,9 +74,7 @@ h1{
     filter:blur(0.4em);
     transform:translate(-1%, 410%) rotatex(55deg) scale(0.6, 1.3);
 }
-.glowing-txt > a{
-    color:var(--color-glow)
-}
+.glowing-txt > a{color:var(--color-glow)}
 /* ------------------------------------------------ */
 h2{
     font-family:'Roboto Mono', monospace;
@@ -111,7 +109,7 @@ a{
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    width:34.3vw;
+    width:38vw;
     height:auto;
     margin:1vh 0 1vh;
     padding:0;
@@ -122,12 +120,12 @@ a{
     background-color: #000000;
     border-radius: 15px;
     order: 2;
-    width: 38%;
+    width: 47%;
     height: 60vh;
-    margin: 2vh 1vw 2.3vh 2vw;
+    margin: 2vh 2vw 2.3vh 0vw;
     padding: 3vh 0 3vh;
 }
-.embedbig{width:80%}
+.embedbig{width:100%}
 
 /* ---------------  big navbar ------------ */
 .navbar{
@@ -144,9 +142,7 @@ a{
     border-bottom-right-radius:20px;
     overflow: hidden;
 }
-.navbar > ul>li{
-    display: inline;
-    float: left;
+.navbar > ul>li{display: inline;float: left;
 }
 .navbar > ul>li > span{
     font-family:'Roboto Mono', monospace;
@@ -206,7 +202,7 @@ ul>li:hover .dropdown-content{
     position:fixed;
 
     /* position of the bars icon */
-    top:0.8vh;
+    top:1vh;
     margin-left:5vw;
     
     color:var(--color-main-light);
@@ -243,19 +239,20 @@ ul>li:hover .dropdown-content{
 /* -------------------- side menu -------------------- */
 .sidemenu{
     position:fixed;
-    top:8.4vh;
+    top:7vh;
     left:0px;
     width:13vw;
-    padding:20px 40px 10px 10px;
+    padding:4vh 40px 10px 10px;
     height:74vh;
     overflow: scroll;
     overflow-x: hidden;
     background-color: #6e6ea0cc;
     text-align: left;
 }
-.sidemenu>ol>li{
-    font-family: 'Montserrat';
-    width: auto;
+.sidemenu>ol>a>li{padding: 1vh 0 1vh 1vw;}
+.sidemenu> ol >a>li:hover{
+    background-color: var(--color-dark);
+    border-radius: 4px;
 }
 .sidemenu>h2{
     font-size: 1.3rem;
@@ -266,7 +263,7 @@ ul>li:hover .dropdown-content{
     color: #cce6ff;
     text-align: center;
     padding: 10px 0 60px;
-    margin:8vh 1.4vw 0 18vw;
+    margin:8vh 1.4vw 0 17vw;
     border-radius: 20px;
     /* border-top-right-radius: 20px;
     border-top-left-radius:20px; */
@@ -291,10 +288,11 @@ ul>li:hover .dropdown-content{
 .container{
     /* border:solid 2px white; */
     display: flex;
-    margin-left:18vw;
+    margin-left:17vw;
+    margin-right: 1vw;
     flex-direction:row;
     flex-wrap:wrap;
-    justify-content:center
+    justify-content:space-between
 }
 /* ------------------------------------------ */
 .section{
@@ -303,7 +301,7 @@ ul>li:hover .dropdown-content{
     text-align: justify;
     height:auto;
     padding:1vh 2vw 3vh 1.3vw;
-    margin: 2vh 5vw 2vh 4.3vw;
+    margin: 2vh 2vw 2vh 0vw;
     border-radius: 20px;
 }
 .section > p{
@@ -315,9 +313,9 @@ ul>li:hover .dropdown-content{
     background-color: rgba(110,110,160, 0.9);
     text-align: justify;
     height:auto;
-    width:43%;
+    width:46%;
+    margin-top:1vw;
     padding:1vh 2vw 3vh 1.3vw;
-    margin: 2.1vh 0.5vw 2vh 0vw;
     border-radius: 20px;
 }
 .sectionhalf > p{
@@ -329,9 +327,9 @@ ul>li:hover .dropdown-content{
     background-color: rgba(110,110,160, 0.6);
     text-align: justify;
     height:auto;
-    width:30vw;
+    width:35vw;
     padding:1.3vh 1vw;
-    margin: 2vh 1vw 2vh 1.2vw;
+    margin: 2vh 2vw 2vh 0vw;
     border-radius: 20px;
 }
 .small0{
@@ -343,20 +341,24 @@ ul>li:hover .dropdown-content{
 }
 /* --------------------------------------------- */
 .contact{
-    background-color: rgba(110,110,160, 0.9);
+    /* background-color: rgba(110,110,160, 0.9); */
+    background-color: var(--color-dark);
     display: flex;
     flex-direction:row;
     flex-wrap:wrap;
-    margin:0.6vh 5vw 2vh 22.3vw;
-    padding-right:1vw;
+    margin:1vw 3vw 2vh 17vw;
+    padding-top:2vw;
+    padding-left: 1vh;
+    padding-bottom: 1vw;
     border-radius:20px;
 }
 .contact>h3{
     order:1;
     width:100%;
     text-align:left;
-    margin:2vh 1vw 1vh 1vw;
-    font-size:1.2rem
+    margin:2vh 1vw 1vh 1.5vw;
+    font-family: myFont;
+    font-size:1.3rem
 }
 .map{
     order:2;
