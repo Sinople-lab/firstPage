@@ -334,7 +334,7 @@ ul>li:hover .dropdown-content{
     margin: 2vh 1vw 2vh 1.2vw;
     border-radius: 20px;
 }
-#small0{
+.small0{
     display:none
 }
 .section1:hover svg{
@@ -442,8 +442,8 @@ ul>li:hover .dropdown-content{
         width:auto;
         background-color: #000000;
     }
-    #small0{display:block}
-    #big0{display:none}
+    .small0{display:block}
+    .big0{display:none}
     .contact{
         margin:1vh 1vw 2vh 1vw;
         background-image:url('../images/map.jpg');
@@ -458,5 +458,5 @@ ul>li:hover .dropdown-content{
         height:100%;
         background-color:rgba(45, 45, 57,0.8)
     }
-    .footer{padding: 2vh 0vw 2vh 0vw;}
+    .footer{padding: 2vh 0vw 2vh 0vw;width: 100%;}
 }
