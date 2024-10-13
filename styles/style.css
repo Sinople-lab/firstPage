@@ -289,7 +289,7 @@ ul>li:hover .dropdown-content{
     /* border:solid 2px white; */
     display: flex;
     margin-left:17vw;
-    margin-right: 1vw;
+    margin-right: 0vw;
     flex-direction:row;
     flex-wrap:wrap;
     justify-content:space-between
@@ -382,6 +382,7 @@ ul>li:hover .dropdown-content{
 }
 .footer{
     width:94vw;
+    margin: 0;
     padding: 3vh 3vw 3vh 3vw;
     background-color: #8585ad;
     text-align: center;
