@@ -151,66 +151,42 @@
 		<!-- ------------------------------------- -->
 		<div class="container">
 			
-			<div class="section" style="order:1">
+			<div class="sectionhalf" style="order:1">
 				<h3>Como hacer una barra de navegacion <i class="fa fa-bars"></i></h3>
 				<p>
-					En <i class="code">html5</i> hay difernetes formas de declarar un color, la mas simple es
-					escribir el nombre del color, por ejemplo escribies <i class="code">background-color:red</i>
-					y el contenedor adquiere un color de fondo rojo. 
+					En Este capitulo vamos a implementar una barra de navegacion basica. En los proximos
+					capitulos vamos a seguir refinando la nav bar, sin embargo aqui te presento la base 
+					de su funcionamiento partiendo de un <i class="code">&lt;ul&gt;</i>. 
 				</p>
 				<p>
-					La siguiente forma y de hecho una de las mas
-					usadas es usar codigo exadecimal, en este codigo escribes <i class="code">#</i> seguido de
-					6 digitos, los primeros 2 representan el nivel de rojo, los 2 siguientes representan el nivel
-					de verde y los 2 ultimos el nivel de azul. Por ejemplo escribes <i class="code">#cccc00</i>
-					y obtienes una tonalidad de verde cercana al amarillo
-					(<i style="background-color: #cccc00;">__</i>).
+					Empezamos creando un <i class="code">div</i> y le asignas una clase
+					con el nombre de tu preferencia, en mi caso le puse <i class="code">.navbar</i>.
+					Dentro del <i class="code">div</i> creas una <i class="code">ul</i> en la que
+					los <i class="code">li</i> seran cada uno de los botones de la barra de 
+					navegacion. Por ultimo dentro de cada <i class="code">li</i> creas un enlace
+					con la etiqueda <i class="code">&lt;a&gt;</i>. Tu vas a decidir a donde te 
+					llevara cada enlace, uno puede ir al pie de pagina, otro a una seccion y otro 
+					nos puede llevar a otra pagina diferente.
 				</p>
-				<p>
-					Otra forma de obtener el mismo color es usando <i class="code">RGB</i>. Para esta forma
-					escribes <i class="code">rbg(x,y,z)</i>, donde &ltx&gt representa un valor
-					para rojo, &lty&gt representa el valor de verde y &ltz&gt representa el valor de azul y
-					los valores aceptados son entre 0 y 255, quedando como <i class="code">rgb(204,204,0)</i>.
-				</p>
-				<p>
-					otra forma de declarar un color es con <i class="code">hsl</i> (Hue, Saturation, Lightness).
-					Hue se traduce como matiz y su valor aceptado va de 0 a 360 y sus unidades son grados,
-					para saturation se escribe un valor entre 0% y 100% y Lightness, que se traduce como brillo,
-					se declara en porcentaje tambien. Para este ejemplo queda como
-					<i class="code">hsl(60, 100%, 40%)</i>.
-				</p>
-			</div>
-			<!-- ---------------------- charts ----------------------- -->
-			<div class="image" style="order: 2;width: 40vh;">
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/hexcolor.png"
-				/>
 			</div>
 
-			<div class="image" style="order: 3;width: 40vh;">
-				<h2>RGB color</h2>
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/rgb.png"
-				/>
+			<div class="section0" style="order: 2;">
+				<span class="code">
+					<p style="color:#71c6dd;font-weight: 600;">codigo en html</p>
+					&lt;div class="navbar"&gt;<br>
+
+					&nbsp;&lt;ul&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;boton 1&lt;/a&gt;&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;boton 2&lt;/a&gt;&lt;/li&gt;<br>
+						&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;boton 3&lt;/a&gt;&lt;/li&gt;<br>
+						&nbsp;&lt;/ul&gt;<br>
+
+					&lt;/div&gt;<br>
+				</span>
 			</div>
 
-			<div class="image" style="order: 4;width: 40vh;">
-				<h2>Hue wheel</h2>
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/colorWheel.png"
-				/>
-			</div>
 			<!-- -------------- video ----------------- -->
-			<div class="embed embedbig" style="order:5">
+			<div class="embed embedbig" style="order:3">
 				<iframe
 					width="100%"
 					height="100%"
@@ -220,64 +196,63 @@
 					allowfullscreen
 				></iframe>
 			</div>
-			
-			<div class="section" style="order:6">
-				<p>
-					Para <i class="code">rgb</i> y <i class="code">hsl</i> puedes agregar un parametro extra
-					que es α. Para esto renombras <i class="code">rgb</i> como <i class="code">rgba</i> y
-					<i class="code">hsl</i> como <i class="code">hsla</i> y agregas este parametro al final,
-					por ejemplo <i class="code">hsla(60,100%,40%,0.5)</i> para conseguir el mismo color pero
-					con una transparencia de 50%. Y para el caso de hexadecimal utilizas la propiedad
-					<i class="code">opacity</i> para manipular el α.
-				</p>
-			</div>
 
-			<div class="sectionhalf" style="order:7">
+			<div class="sectionhalf" style="order: 4;">
 				<p>
-					Te recomiendo determinar tu paleta de colores y asignas nombres a cada color.
-					En este proyecto tengo esta paleta de colores que usare para construir el sitio web y
-					declaro los nombres dentro de <i class="code">:root{}</i>, con esto indico que estas
-					variables seran de alcance global, es decir que
-					estaran disponibles para todas las clases dentro del archivo <i class="code">css</i> ya
-					que <i class="code">root</i> hace referencia a <i class="code">html</i>, como te
-					mencione en el primer capitulo.
-					Para usar
-					un color dentro de tu paleta de colores lo asignas usando la funcion
-					<i class="code">var()</i> y dentro de los parentesis escribes el nombre del color
-					que quieras usar, por ejemplo <i class="code">background-color:var(--color-main)</i>.
-					<i class="code">var()</i> se usa siempre que se quiere utilizar el valor
-					de una variable como parametro para una propiedad de <i class="code">css</i>.
+					Para el <i class="code">CSS</i> le asignamos un <i class="code">width:100%;</i>
+					para <i class="code">.navbar</i> y el estilo que desees, el ancho tambien
+					puede ser el que desees aunque en este ejemplo usare 100%.
 				</p>
 				<p>
-					Por ultimo quisiera recomendarte el
-					<a href="https://www.w3schools.com/colors/colors_picker.asp">Color picker</a>
-					de &copy<a href="https://www.w3schools.com/">W3Schools</a>,
-					es muy practico a la hora de elegir tu paleta de colores. No es que yo trabaje para
-					ellos, este proyecto es completamente independiente y solo lo hago porque me gusta
-					enseñar lo que se y ayudar a otros.
+					Para el estilo de <i class="code">.navbar > ul</i> es importante que especifiques
+					<i class="code">overflow:auto</i> para evitar que, al acomodar los <i class="code">li</i>
+					de forma horizontal, estos no se muestren correctamente dentro del 
+					<i class="code">viewport</i>. Tambien debemos definir 
+					<i class="code">list-style-type:none</i> dentro del estilo de 
+					<i class="code">ul</i> para que los <i class="code">li</i> no 
+					tengan las marcas de la lista o puedes usar <i class="code">display:inline</i> 
+					en el estilo de <i class="code">li</i> y tiene el mismo efecto.
+				</p>
+				<p>
+					Ahora para <i class="code">.navbar>ul>li</i> especificas 
+					<i class="code">float:left</i> para que se acomoden de izquierda a derecha.
+					Por ultimo para los enlaces defines <i class="code">display:block</i> para 
+					que podamos personalizar su estilo como si se tratara de un 
+					<i class="code">div</i> y le agreguemos caracteristicas de 
+					<i class="code">padding</i>, por ejemplo. Tambien asegurate de agregar
+					<i class="code">text-decoration:none</i> en el estilo de los enlaces
+					para que no presente el estilo predeterminado para enlaces.
 				</p>
 			</div>
-			<div class="section0" style="order:8">
+			<div class="section0" style="order: 5;">
 				<span class="code">
-					<br>
-					:root {<br>
-						--color-main: #71c6dd;<br>
-						--color-main-light: #e1f6fb;<br>
-						--color-dark: #3f4156;<br>
-						--color-dark-medium: #51546e;<br>
-						--color-dark-light: #696d97;<br>
-						--color-light: #e5e5e5;<br>
-						--color-gray: #8b8b8b;<br>
-						--color-light-gray: #b2bdbd;<br>
-						--color-bg: #2d2d39;<br>
-						--color-success: #5dd693;<br>
-						--color-error: #fc4b0b;<br>
-						--color-glow:#61efff;<br>
+					/* ---------- bavbar --------- */<br>
+					.navbar{<br>
+						&nbsp;&nbsp;background-color: var(--color-dark-light);<br>
+						&nbsp;&nbsp;color: var(--color-light);<br>
+						&nbsp;&nbsp;border-bottom-left-radius: 20px;<br>
+						&nbsp;&nbsp;border-bottom-right-radius: 20px;<br>
+						&nbsp;&nbsp;width: 100%;<br>
+						&nbsp;&nbsp;margin: 0px 10px 5px;<br>
+					}<br>
+					.navbar > ul {<br>
+						&nbsp;&nbsp;margin: 0;<br>
+						&nbsp;&nbsp;overflow: auto;<br>
+						&nbsp;&nbsp;list-style-type: none;<br>
+					}<br>
+					.navbar > ul >li{<br>
+						&nbsp;&nbsp;float: left;<br>
+					}<br>
+					.navbar > ul > li >a{<br>
+						&nbsp;&nbsp;color: var(--color-main);<br>
+						&nbsp;&nbsp;display: block;<br>
+						&nbsp;&nbsp;padding: 4px 6px;<br>
+						&nbsp;&nbsp;text-decoration: none;<br>
 					}<br>
 				</span>
 			</div>
 		</div>
-
+		
 		<div class="contact">
 			<h3 >Para agendar una entrevista puedes contactarme 
 				por estos medios
@@ -295,7 +270,7 @@
 		</div>
 
 		<div id="footer" class="footer">
-			<p> Powered by &copy <i class="fa fa-brands fa-github"style="margin:4px 2px 0 2px"></i><a href="https://github.com/Sinople-lab">Ashur-lab</a> | &copy<a href="https://www.w3schools.com/">W3Schools</a></p>
+			<p> Powered by &copy; <i class="fa fa-brands fa-github"style="margin:4px 2px 0 2px"></i><a href="https://github.com/Sinople-lab">Ashur-lab</a></p>
 		</div>
 	</body>
 </html>

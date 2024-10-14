@@ -28,17 +28,17 @@
 			table{
 				width: 100%;
 				text-align: center;
+				border-collapse: collapse;
+			}
+			tr:nth-child(even) {
+  				background-color: #51546e;
 			}
 			th, td{
 				color:azure;
+				border: 1px solid #51546e;
 			 }
 			th{
 				text-transform: uppercase;
-			}
-			dl{
-				color: #71c6dd;
-				text-align: center;
-				list-style-position: inside;
 			}
 			ol{
 				padding:0vh 0 0 1vw;
@@ -151,66 +151,49 @@
 		<!-- ------------------------------------- -->
 		<div class="container">
 			
-			<div class="section" style="order:1">
+			<div class="sectionhalf" style="order:1">
 				<h3>Responsividad <i class="fa fa-mobile"></i></h3>
 				<p>
-					En <i class="code">html5</i> hay difernetes formas de declarar un color, la mas simple es
-					escribir el nombre del color, por ejemplo escribies <i class="code">background-color:red</i>
-					y el contenedor adquiere un color de fondo rojo. 
+					En diseño responsivo se busca que la pagina se adaptede mejor forma a los diferentes
+					dispositivos. Ya que si creas un <i class="code">html</i> y lo visualizas en un 
+					viewport de dispositivo mobil notaras que las dimensiones de los elementos se
+					escalan al tamaño dispositivo, es decir que apenas y se alcanza a leer.
 				</p>
 				<p>
-					La siguiente forma y de hecho una de las mas
-					usadas es usar codigo exadecimal, en este codigo escribes <i class="code">#</i> seguido de
-					6 digitos, los primeros 2 representan el nivel de rojo, los 2 siguientes representan el nivel
-					de verde y los 2 ultimos el nivel de azul. Por ejemplo escribes <i class="code">#cccc00</i>
-					y obtienes una tonalidad de verde cercana al amarillo
-					(<i style="background-color: #cccc00;">__</i>).
+					El primer paso para solucionar esto es especificando en 
+					<i class="code">&lt;meta&gt;</i> que para <i class="code">viewport</i> el
+					ancho sera: <i class="code">width=device-width</i>. Con solo escribir esto
+					la pagina se auto ajustara, hasta cierto punto, a los diferentes tamaños
+					de <i class="code">viewport</i> en los que la visualicemos.
 				</p>
 				<p>
-					Otra forma de obtener el mismo color es usando <i class="code">RGB</i>. Para esta forma
-					escribes <i class="code">rbg(x,y,z)</i>, donde &ltx&gt representa un valor
-					para rojo, &lty&gt representa el valor de verde y &ltz&gt representa el valor de azul y
-					los valores aceptados son entre 0 y 255, quedando como <i class="code">rgb(204,204,0)</i>.
-				</p>
-				<p>
-					otra forma de declarar un color es con <i class="code">hsl</i> (Hue, Saturation, Lightness).
-					Hue se traduce como matiz y su valor aceptado va de 0 a 360 y sus unidades son grados,
-					para saturation se escribe un valor entre 0% y 100% y Lightness, que se traduce como brillo,
-					se declara en porcentaje tambien. Para este ejemplo queda como
-					<i class="code">hsl(60, 100%, 40%)</i>.
+					Ahora te invito a ver el video ( ^__^)/
 				</p>
 			</div>
-			<!-- ---------------------- charts ----------------------- -->
-			<div class="image" style="order: 2;width: 40vh;">
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/hexcolor.png"
-				/>
-			</div>
-
-			<div class="image" style="order: 3;width: 40vh;">
-				<h2>RGB color</h2>
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/rgb.png"
-				/>
-			</div>
-
-			<div class="image" style="order: 4;width: 40vh;">
-				<h2>Hue wheel</h2>
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/colorWheel.png"
-				/>
+			<div class="section0">
+				<span class="code">
+					&lt;head&gt;<br>
+						&nbsp;&nbsp;&lt;title&gt;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;diseño responsivo<br>
+						&nbsp;&nbsp;&lt;/title&gt;<br>
+						
+						&nbsp;&nbsp;&lt;meta<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;name="viewport"<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;content="width=device-width, initial-scale=1.0"
+						&nbsp;&nbsp;><br>
+						&nbsp;&nbsp;&lt;meta<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;name="Cursos de html"<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;content="Pagina para enseñar conceptos basicos de programacion web"	
+						&nbsp;&nbsp;><br>
+						&nbsp;&nbsp;&lt;link <br>
+							&nbsp;&nbsp;&nbsp;&nbsp;rel="stylesheet"<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;href="../styles/style.css"<br>
+						&nbsp;&nbsp;><br>
+					&lt;/head>
+				</span>
 			</div>
 			<!-- -------------- video ----------------- -->
-			<div class="embed embedbig" style="order:5">
+			<div class="embed embedbig" style="order:3">
 				<iframe
 					width="100%"
 					height="100%"
@@ -220,59 +203,67 @@
 					allowfullscreen
 				></iframe>
 			</div>
-			
-			<div class="section" style="order:6">
+			<div class="sectionhalf" style="order:4">
 				<p>
-					Para <i class="code">rgb</i> y <i class="code">hsl</i> puedes agregar un parametro extra
-					que es α. Para esto renombras <i class="code">rgb</i> como <i class="code">rgba</i> y
-					<i class="code">hsl</i> como <i class="code">hsla</i> y agregas este parametro al final,
-					por ejemplo <i class="code">hsla(60,100%,40%,0.5)</i> para conseguir el mismo color pero
-					con una transparencia de 50%. Y para el caso de hexadecimal utilizas la propiedad
-					<i class="code">opacity</i> para manipular el α.
+					Aqui te muestro un fragmento del <i class="code">css</i> que uso en la pagina de 
+					este curso. Como puedes ver uso univades relativas ya que estas se ajustan mejor
+					ante la variedad de diferentes tamaños de <i class="code">viewport</i>.
+				</p>
+				<table>
+					<tr>
+						<th>unidad</th>
+						<th>definicion</th>
+					</tr>
+					<tr>
+						<td>vw</td>
+						<td>relativo a 1% de viewport-width</td>
+					</tr>
+					<tr>
+						<td>vh</td>
+						<td>relativo a 1% de viewport-height</td>
+					</tr>
+					<tr>
+						<td>vmin</td>
+						<td>relativo a 1% de la dimension mas chica del viewport</td>
+					</tr>
+					<tr>
+						<td>vmax</td>
+						<td>relativo a 1% de la dimension mas grande de viewport</td>
+					</tr>
+					<tr>
+						<td>em</td>
+						<td>relativo a tamaño de la fuente del elemento</td>
+					</tr>
+					<tr>
+						<td>rem</td>
+						<td>relativo a tamaño de la fuente de root</td>
+					</tr>
+				</table>
+				<p>
+					Tambien se puede notar que practicamente se modifica cualquier propiedad que se desee 
+					con tal de conseguir el resultado que uno busca en dispositivos mobiles, desde 
+					tamaño de fuente, dimensiones, hasta ocultar secciones completas con 
+					<i class="code">display:none;</i> entre otras propiedades.
 				</p>
 			</div>
-
-			<div class="sectionhalf" style="order:7">
-				<p>
-					Te recomiendo determinar tu paleta de colores y asignas nombres a cada color.
-					En este proyecto tengo esta paleta de colores que usare para construir el sitio web y
-					declaro los nombres dentro de <i class="code">:root{}</i>, con esto indico que estas
-					variables seran de alcance global, es decir que
-					estaran disponibles para todas las clases dentro del archivo <i class="code">css</i> ya
-					que <i class="code">root</i> hace referencia a <i class="code">html</i>, como te
-					mencione en el primer capitulo.
-					Para usar
-					un color dentro de tu paleta de colores lo asignas usando la funcion
-					<i class="code">var()</i> y dentro de los parentesis escribes el nombre del color
-					que quieras usar, por ejemplo <i class="code">background-color:var(--color-main)</i>.
-					<i class="code">var()</i> se usa siempre que se quiere utilizar el valor
-					de una variable como parametro para una propiedad de <i class="code">css</i>.
-				</p>
-				<p>
-					Por ultimo quisiera recomendarte el
-					<a href="https://www.w3schools.com/colors/colors_picker.asp">Color picker</a>
-					de &copy<a href="https://www.w3schools.com/">W3Schools</a>,
-					es muy practico a la hora de elegir tu paleta de colores. No es que yo trabaje para
-					ellos, este proyecto es completamente independiente y solo lo hago porque me gusta
-					enseñar lo que se y ayudar a otros.
-				</p>
-			</div>
-			<div class="section0" style="order:8">
+			<div class="section0" style="order:5">
 				<span class="code">
 					<br>
-					:root {<br>
-						--color-main: #71c6dd;<br>
-						--color-main-light: #e1f6fb;<br>
-						--color-dark: #3f4156;<br>
-						--color-dark-medium: #51546e;<br>
-						--color-dark-light: #696d97;<br>
-						--color-light: #e5e5e5;<br>
-						--color-gray: #8b8b8b;<br>
-						--color-light-gray: #b2bdbd;<br>
-						--color-bg: #2d2d39;<br>
-						--color-success: #5dd693;<br>
-						--color-error: #fc4b0b;<br>
-						--color-glow:#61efff;<br>
+					@media only screen and (max-device-width:800px){<br>
+						&nbsp;&nbsp;p{font-size:0.9em}<br>
+						&nbsp;&nbsp;.smallh{display:block;}<br>
+						&nbsp;&nbsp;.bigh{display:none;}<br>
+						&nbsp;&nbsp;.glowing-txt{font-size: 4.5rem;}<br>
+						&nbsp;&nbsp;.glowing-txt::before{display:none;}<br>
+						&nbsp;&nbsp;.smallmenu{display:block}<br>
+						&nbsp;&nbsp;.navbar{display:none}<br>
+						&nbsp;&nbsp;.navbar>ul{margin:0 0 0 0;}<br>
+						&nbsp;&nbsp;.sidemenu{display:none;}<br>
+						&nbsp;&nbsp;.embed{<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;width:100%;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;height:34vh;<br>
+							&nbsp;&nbsp;&nbsp;&nbsp;margin:1vh 1vw;<br>
+						&nbsp;&nbsp;}<br>
 					}<br>
 				</span>
 			</div>

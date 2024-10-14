@@ -332,7 +332,7 @@ ul>li:hover .dropdown-content{
     height:auto;
     width:35vw;
     padding:1.3vh 1vw;
-    margin: 2vh 2vw 2vh 0vw;
+    margin: 1vw 2vw 0.5vh auto;
     border-radius: 20px;
 }
 .small0{
@@ -465,7 +465,7 @@ ul>li:hover .dropdown-content{
     }
     .footer{
         padding: 2vh 0vw 2vh 0vw;
-        width: 100%;
+        /* width: 100%; */
         margin:0
     }
 }
