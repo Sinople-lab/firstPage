@@ -215,7 +215,9 @@
 
 			<div class="section0" style="order:5">
 				<span class="code">
-					body{background-color:rgba(0,0,0,1);}<br>
+					body{<br>
+						background-color:rgba(0,0,0,1);<br>
+					}<br>
 					.block{<br>
 						border: 3px solid white;<br>
 					}<br>
@@ -255,10 +257,10 @@
 				<span class="code">
 					/*  declarar los valores en una linea */<br>
 					.block{<br>
-						padding: x ; /* 4 valores = x */<br>
-						padding: x y ; /* top,bottom = x | left,right = y */<br>
-						padding: x y z ; /* top = x | left,right = y | bottom = z */<br>
-						padding: x y z w; /* top = x | left = y | bottom = z | right = w */<br>					
+						padding: x ; /* x = 4 valores */<br>
+						padding: x y ; /* x = top,bottom | y = left,right */<br>
+						padding: x y z ; /* x = top | y = left,right | z = bottom */<br>
+						padding: x y z w; /* x = top | y = left | z = bottom | w = right */<br>					
 					}<br>
 				</span> 
 			</div>
@@ -266,15 +268,15 @@
 				<span class="code" style="font-size:0.9em">
 					/*  declarar los valores en una linea */<br>
 					.block{<br>
-						padding:x ;/* 4 valores = x */<br>
+						padding:x ;/* x = 4 valores */<br>
 						<br>
-						/* top,bottom = x | left,right = y */<br>
+						/* x=top,bottom | y=left,right */<br>
 						padding:x y ;<br>
 						<br>
-						/* top =x | left,right = y | bottom = z */<br>
+						/* x=top | y=left,right | z=bottom */<br>
 						padding:x y z ;<br>
 						<br>
-						/* top =x | left = y | bottom = z | right = w */<br>
+						/* x=top | y=left | z=bottom | w=right */<br>
 						padding:x y z w;<br>					
 					}<br>
 				</span>
