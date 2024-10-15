@@ -151,66 +151,40 @@
 		<!-- ------------------------------------- -->
 		<div class="container">
 			
-			<div class="section" style="order:1">
+			<div class="sectionhalf" style="order:1">
 				<h3>Como hacer dropdown menus  <i class="material-icons" style="font-size:1.3em; transform:translatey(30%)">clear_all</i></h3>
 				<p>
-					En <i class="code">html5</i> hay difernetes formas de declarar un color, la mas simple es
-					escribir el nombre del color, por ejemplo escribies <i class="code">background-color:red</i>
-					y el contenedor adquiere un color de fondo rojo. 
+					La idea basica para hacer menus desplegables(drodowns) consiste en crear el menu en
+					un contenedor de <i class="code">html</i> y establecer su propiedad de 
+					<i class="code">display:none</i> para que se mantenga oculto hasta que ocurra
+					cierto evento. Esto se puede hacer con JavaScript, pero aqui te enseño a hacerlo
+					solo con <i class="code">css</i>.
 				</p>
 				<p>
-					La siguiente forma y de hecho una de las mas
-					usadas es usar codigo exadecimal, en este codigo escribes <i class="code">#</i> seguido de
-					6 digitos, los primeros 2 representan el nivel de rojo, los 2 siguientes representan el nivel
-					de verde y los 2 ultimos el nivel de azul. Por ejemplo escribes <i class="code">#cccc00</i>
-					y obtienes una tonalidad de verde cercana al amarillo
-					(<i style="background-color: #cccc00;">__</i>).
-				</p>
-				<p>
-					Otra forma de obtener el mismo color es usando <i class="code">RGB</i>. Para esta forma
-					escribes <i class="code">rbg(x,y,z)</i>, donde &ltx&gt representa un valor
-					para rojo, &lty&gt representa el valor de verde y &ltz&gt representa el valor de azul y
-					los valores aceptados son entre 0 y 255, quedando como <i class="code">rgb(204,204,0)</i>.
-				</p>
-				<p>
-					otra forma de declarar un color es con <i class="code">hsl</i> (Hue, Saturation, Lightness).
-					Hue se traduce como matiz y su valor aceptado va de 0 a 360 y sus unidades son grados,
-					para saturation se escribe un valor entre 0% y 100% y Lightness, que se traduce como brillo,
-					se declara en porcentaje tambien. Para este ejemplo queda como
-					<i class="code">hsl(60, 100%, 40%)</i>.
+					Vamos a modificar la nav bar que hicimos cambiando las etiquetas 
+					<i class="code">&lt;a&gt;</i> por <i class="code">&lt;span&gt;</i>, ya que no 
+					seran enlaces o si gustas puedes mantener uno o varios como enlace y te aseguras
+					de agregar <i class="code">, .navbar > ul>li > span</i> (con la coma) en 
+					donde defines el estilo para <i class="code">.navbar > ul>li >a</i> o defines un
+					estilo diferente para ambos. En <i class="code">html</i> cada <i class="code">li</i>
+					quedara como este codigo.
 				</p>
 			</div>
-			<!-- ---------------------- charts ----------------------- -->
-			<div class="image" style="order: 2;width: 40vh;">
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/hexcolor.png"
-				/>
-			</div>
-
-			<div class="image" style="order: 3;width: 40vh;">
-				<h2>RGB color</h2>
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/rgb.png"
-				/>
-			</div>
-
-			<div class="image" style="order: 4;width: 40vh;">
-				<h2>Hue wheel</h2>
-				<img 
-					title="Hex color"
-					width="80%"
-					height="auto"
-					src="../images/colorWheel.png"
-				/>
+			<div class="section0" style="order:3">
+				<span class="code">
+					<br>
+					&lt;li><br>
+					&nbsp;&nbsp;&lt;span href="#footer">footer&lt;/span><br>
+					&nbsp;&nbsp;&lt;div class="dropdown-content"><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="">Hello&lt;/a><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="">Bonjour&lt;/a><br>
+							&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="">Merhaba&lt;/a><br>
+					&nbsp;&nbsp;&lt;/div><br>
+					&lt;/li><br>
+				</span>
 			</div>
 			<!-- -------------- video ----------------- -->
-			<div class="embed embedbig" style="order:5">
+			<div class="embed embedbig" style="order:3">
 				<iframe
 					width="100%"
 					height="100%"
@@ -220,59 +194,61 @@
 					allowfullscreen
 				></iframe>
 			</div>
-			
-			<div class="section" style="order:6">
-				<p>
-					Para <i class="code">rgb</i> y <i class="code">hsl</i> puedes agregar un parametro extra
-					que es α. Para esto renombras <i class="code">rgb</i> como <i class="code">rgba</i> y
-					<i class="code">hsl</i> como <i class="code">hsla</i> y agregas este parametro al final,
-					por ejemplo <i class="code">hsla(60,100%,40%,0.5)</i> para conseguir el mismo color pero
-					con una transparencia de 50%. Y para el caso de hexadecimal utilizas la propiedad
-					<i class="code">opacity</i> para manipular el α.
-				</p>
-			</div>
 
-			<div class="sectionhalf" style="order:7">
+			<div class="sectionhalf" style="order:4">
 				<p>
-					Te recomiendo determinar tu paleta de colores y asignas nombres a cada color.
-					En este proyecto tengo esta paleta de colores que usare para construir el sitio web y
-					declaro los nombres dentro de <i class="code">:root{}</i>, con esto indico que estas
-					variables seran de alcance global, es decir que
-					estaran disponibles para todas las clases dentro del archivo <i class="code">css</i> ya
-					que <i class="code">root</i> hace referencia a <i class="code">html</i>, como te
-					mencione en el primer capitulo.
-					Para usar
-					un color dentro de tu paleta de colores lo asignas usando la funcion
-					<i class="code">var()</i> y dentro de los parentesis escribes el nombre del color
-					que quieras usar, por ejemplo <i class="code">background-color:var(--color-main)</i>.
-					<i class="code">var()</i> se usa siempre que se quiere utilizar el valor
-					de una variable como parametro para una propiedad de <i class="code">css</i>.
+					En <i class="code">css</i> primero establecemos <i class="code">display:none</i>
+					para la clase <i class="code">.dropdown-content</i> y definimos cual sera 
+					<i class="code">min-width</i> para mantener consistencia en el ancho de los menus.
+					En <i class="code">.dropdown-content>a{}</i> establecemos
+					<i class="code">display:block</i> para poder personalizar los enlaces y hacer 
+					que se comporten como botones y agregamos <i class="code">text-decoration:none</i>
+					para eliminar el estilo predeterminado de enlaces.
 				</p>
 				<p>
-					Por ultimo quisiera recomendarte el
-					<a href="https://www.w3schools.com/colors/colors_picker.asp">Color picker</a>
-					de &copy<a href="https://www.w3schools.com/">W3Schools</a>,
-					es muy practico a la hora de elegir tu paleta de colores. No es que yo trabaje para
-					ellos, este proyecto es completamente independiente y solo lo hago porque me gusta
-					enseñar lo que se y ayudar a otros.
+					En este ejemplo le agregamos mas dinamismo al menu desplegable al agregar 
+					<i class="code">.dropdown-content>a:hover{}</i> y con esto podemos 
+					definir alguna reaccion de los menus al pasar el cursor sobre ellos. En este
+					caso le cambiamos el color de fondo a <i class="code">&lt;a></i>.
+				</p>
+				<p>
+					En la ultima parte de este codigo es donde se establece que el menu desplegable
+					sera visible cuando se realize un <i class="code">hover</i> sobre 
+					los <i class="code">&lt;li></i>. Recuerda dejar solo un espacio entre la primera 
+					parte y <i class="code">.dropdown-content</i> sin colocar comas.
+				</p>
+				<p>
+					Y eso es todo ! ( ^__^)/ ojala que te haya gustado el tema y que sigas practicando.
+					Tambien explora con mas posibilidades y consulta las referencias de 
+					<a href="https://www.w3.org" target="_blank">W3C</a>,
+					<a  href="https://developer.mozilla.org/en-US/" target="_blank">MDN docs</a> 
+					y <a href="https://www.w3schools.com/" target="_blank">W3Schools</a>.
 				</p>
 			</div>
-			<div class="section0" style="order:8">
+			<div class="section0" style="order: 5;">
 				<span class="code">
-					<br>
-					:root {<br>
-						--color-main: #71c6dd;<br>
-						--color-main-light: #e1f6fb;<br>
-						--color-dark: #3f4156;<br>
-						--color-dark-medium: #51546e;<br>
-						--color-dark-light: #696d97;<br>
-						--color-light: #e5e5e5;<br>
-						--color-gray: #8b8b8b;<br>
-						--color-light-gray: #b2bdbd;<br>
-						--color-bg: #2d2d39;<br>
-						--color-success: #5dd693;<br>
-						--color-error: #fc4b0b;<br>
-						--color-glow:#61efff;<br>
+					/* ------ dropdown ------ */<br>
+					.dropdown-content{<br>
+						/* para el despliegue correcto */<br>
+						position: absolute;<br>
+						display: none; /* oculto */<br>
+						min-width: 160px;<br>
+						background-color: var ( --color-dark-light );<br>
+						border-radius: 15px;<br>
+					}<br>
+					.dropdown-content>a{<br>
+						color: var(--color-main);<br>
+						display: block;/* ahora es bloque */<br>
+						padding: 4px;<br>
+						border-radius: 15px;<br>
+						text-decoration: none;<br>
+					}<br>
+					.dropdown-content>a:hover{<br>
+						background-color: var(--color-dark);<br>
+					}<br>
+					/* se habilita el despliegue */<br>
+					.navbar > ul >li:hover .dropdown-content{<br>
+						display: block;<br>
 					}<br>
 				</span>
 			</div>
