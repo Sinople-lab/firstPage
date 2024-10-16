@@ -157,6 +157,11 @@
 .main-contact>.contact{
     margin:1vh 1vw;
 }
+.full{
+    margin: 0;
+    width: 100%;
+    overflow: hidden;
+}
 /* ////////////////// mobile ////////////////// */
 @media only screen and (max-device-width:800px){
     .main{

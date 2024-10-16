@@ -30,6 +30,7 @@
 }
 
 body{
+    overflow-x: hidden;
     background-color: var(--color-bg);
     background-image: url('../images/copy.png');
     /* background-repeat:no-repeat; */
@@ -111,7 +112,7 @@ a{
     align-items:center;
     width:38vw;
     height:auto;
-    margin:1vh 0 1vh;
+    margin:1vh 1vw 1vh;
     padding:0;
     border-radius:16px;
 }
