@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="es">
 	<head>
 		
 		<title>
@@ -28,9 +28,14 @@
 			table{
 				width: 100%;
 				text-align: center;
+				border-collapse: collapse;
+			}
+			tr:nth-child(even) {
+  				background-color: #51546e;
 			}
 			th, td{
 				color:azure;
+				border: 1px solid #51546e;
 			 }
 			th{
 				text-transform: uppercase;
@@ -153,7 +158,15 @@
 			
 			<div class="section" style="order:1">
 				<h3>Como hacer float layout en CSS <i class="material-icons" style="transform: translateY(10%);">view_quilt</i></h3>
-				
+				<p>
+					Bueno ahora vamos a ver una de varias alternativas para maquetacion(layout) en html. Al asignar 
+					<i class="code">float</i> a la propiedad <i class="code">display</i> de un item dentro de un contnedor,
+					estamos estableciendo en que lado se va a desplegar dicho item. Para este ejemplo voy a usar el caso 
+					donde tenemos un side menu y con <i class="code">float</i> lo desplegamos en un lado u otro.
+				</p>
+				<p>
+					Como en otros capitulos, puedes encontrar los fragmentos de codigo que use para este ejemplo.
+				</p>
 			</div>
 			<!-- -------------- video ----------------- -->
 			<div class="embed embedbig" style="order:2">
@@ -166,23 +179,50 @@
 					allowfullscreen
 				></iframe>
 			</div>
-			
-			<div class="section0" style="order:8">
+			<div class="sectionhalf" style="order: 3;">
+				<p>
+					Para usar <i class="code">float</i> primero hay que establecer 
+					<i class="code">display:table</i> en el contenedor padre. Luego 
+					para los items dentro del contenedor usamos la propiedad <i class="code">float:</i>
+					y tenemos varias opciones (<a href="https://developer.mozilla.org/en-US/">MDN docs</a>): 
+				</p>
+				<table>
+					<tr>
+						<th>valor</th>
+						<th>definicion</th>
+					</tr>
+					<tr>
+						<td>left</td>
+						<td>el item "flota" a la izquierda</td>
+					</tr>
+					<tr>
+						<td>right</td>
+						<td>el item "flota" a la derecha</td>
+					</tr>
+					<tr>
+						<td>none</td>
+						<td>el item no flota, determinado</td>
+					</tr>
+					<tr>
+						<td>inline-start</td>
+						<td>el item "flota" al inicio de su contenedor</td>
+					</tr>
+					<tr>
+						<td>inline-end</td>
+						<td>el item "flota hacia el lado final de su contenedor</td>
+					</tr>
+				</table>
+			</div>
+			<div class="section0" style="order:4">
 				<span class="code">
+					/* contenedor padre */<br>
+					.container {<br>
+						&nbsp;&nbsp;display: table;<br>
+					}<br>
 					<br>
-					:root {<br>
-						--color-main: #71c6dd;<br>
-						--color-main-light: #e1f6fb;<br>
-						--color-dark: #3f4156;<br>
-						--color-dark-medium: #51546e;<br>
-						--color-dark-light: #696d97;<br>
-						--color-light: #e5e5e5;<br>
-						--color-gray: #8b8b8b;<br>
-						--color-light-gray: #b2bdbd;<br>
-						--color-bg: #2d2d39;<br>
-						--color-success: #5dd693;<br>
-						--color-error: #fc4b0b;<br>
-						--color-glow:#61efff;<br>
+					/* item */<br>
+					.section{<br>
+					float:right | left | none | inline-start | inline-end;<br>
 					}<br>
 				</span>
 			</div>

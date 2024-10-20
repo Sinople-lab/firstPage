@@ -156,7 +156,7 @@
 				<p>
 					Flex es un modo de operacion que se asigna en la propiedad <i class="code">display</i> de un
 					conenedor e indica que ahora los items dentro del contenedor seran "flexibles" en cuanto a su 
-					acomodo de acuerdo al tamano del contenedor, lo que lo hace bueno para su uso en aplicaciones 
+					acomodo dentro del contenedor, lo que lo hace bueno para su uso en aplicaciones 
 					responsivas.
 				</p>
 				<p>
@@ -177,6 +177,65 @@
 					allowfullscreen
 				></iframe>
 			</div>
+			<div class="sectionhalf" style="order: 3;">
+				<p>
+					Primero definimos <i class="code">display:flex</i> en el contenedor padre. Ahora 
+					podemos usar las propiedades de un <i class="code">flex item</i> en los items 
+					hijos, por ejemplo <i class="code">order</i>, con la cual dependiendo del numero 
+					que asignemos a <i class="code">order</i> sera el orden en el que se va a desplegar 
+					el item.
+				</p>
+				<p>
+					Otra propiedad muy util es <i class="code">wrap</i>, con la que definimos si 
+					los items seran envueltos por una fila cuyo limite sera el borde del contenedor 
+					padre. Al usar <i class="code">wrap</i>, si los items ya han cubierto toda 
+					el area horizontal del contenedor, el siguiente item se desplegara en la "fila" 
+					de abajo y asi sucesivamente. Tambien podemos usar <i class="code">flex-direction</i>
+					con la que definimos <i class="code">column</i> o <i class="code">row</i> y si 
+					pones <i class="code">column</i>, por ejemplo, entonces los items se iran desplegando 
+					uno abajo del anterior.
+				</p>
+				<p>
+					Dentro del estilo de los items tambien podemos hacer uso de la propiedad 
+					<i class="code">flex</i> a la que le asignas un numero entero y, dependiendo 
+					del valor que le asignes, el item ajusta su tamano con respecto a sus items 
+					"hermanos". 
+				</p>
+			</div>
+			<div class="section0" style="order:4">
+				<span class="code">
+					.container{<br>
+						display:flex;<br>
+						flex-wrap:wrap;<br>
+						flex-direction:row;<br>
+					}<br>
+					.section{<br>
+						order:1<br>
+						flex:2;<br>
+					}<br>
+					.section2{<br>
+						order:3<br>
+						flex:1;<br>
+					}<br>
+					.imge{<br>
+						order:2;<br>
+						flex:3;<br>
+					}<br>
+				</span>
+			</div>
+			<div class="section" style="order: 5;">
+				<p>
+					Por ultimo te recomiendo revisar el
+					<a href="https://www.w3schools.com/cssref/playdemo.php?filename=playcss_flex">demo</a>
+					de <a href="https://www.w3schools.com/">W3Schools</a> que use en el video para mostrar
+					mas opciones con <i class="code">felx</i> y descargar el
+					<a href="https://css-tricks.com/wp-content/uploads/2022/02/css-flexbox-poster.png">poster</a>
+					del articulo
+					<a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Flexbox Layout Guide</a>,
+					de <a href="https://css-tricks.com/author/chriscoyier/">Chris Coyier</a>,
+					que describe todas las propiedades de flex de forma grafica.
+				</p>
+			</div>
 		</div>
 
 		<div class="contact">
@@ -196,7 +255,7 @@
 		</div>
 
 		<div id="footer" class="footer">
-			<p> Powered by &copy <i class="fa fa-brands fa-github"style="margin:4px 2px 0 2px"></i><a href="https://github.com/Sinople-lab">Ashur-lab</a> | &copy<a href="https://www.w3schools.com/">W3Schools</a></p>
+			<p> Powered by &copy <i class="fa fa-brands fa-github"style="margin:4px 2px 0 2px"></i><a href="https://github.com/Sinople-lab">Ashur-lab</a></p>
 		</div>
 	</body>
 </html>
