@@ -151,12 +151,89 @@
 		<!-- ------------------------------------- -->
 		<div class="container">
 			
-			<div class="section" style="order:1">
-				<h3>Como usar fuentes en html ( ^__^)/ <i class="fa fa-align-left" ></i></h3>
+			<div class="sectionhalf" style="order:1">
+				<h3>Como usar fuentes en html ( ^__^)/  <i class="fa fa-align-left" ></i></h3>
+				<p>
+					Empezamos con agregar la propiedad <i class="code">font-family</i> cualquier clase
+					que se utilice para texto, por ejemplo <i class="code">a</i>, y defines la fuente 
+					que vas a usar limitada por (""), seguido de una coma y con una opcion en caso de 
+					que tu fuente no se encuentre.
+				</p>
 			</div>
-			
+
+			<div class="section0" style="order:2">
+				<span class="code">
+					<br>
+					a {<br>
+					&nbsp;&nbsp;font-family: "Roboto", sans-serif;<br>
+					}<br>
+					
+				</span>
+			</div>
+			<div class="section" style="order:3">
+				<p>
+					Cuando HTML no reconoce la fuente que quisieras usar, entonces debes importarla.
+					El primer metodo que usaremos es copiar y pegar el codigo embebido en el 
+					archivo HTML dentro de la etiqueta <i class="code">&lt;head&gt;</i>. Otra opcion
+					es importar la fuente desde el archivo CSS, para esto escribes 
+					<i class="code">@import url()</i> y dentro de los parentesis escripes la URL de
+					donde se importa la fuente.
+				</p>
+			</div>
+			<!-- ------------------------------------------------------------------------------ -->
+			<div class="section0 big0" style="order:4;width:100%;margin: 0.5vh 2vw 0.5vh 0.4vw;">
+				<span class="code">
+					/*  Pega este codigo en el archivo html dentro de la etiqueta &lt;head&gt; */<br>
+					<br>
+					&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;<br>
+					&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;<br>
+					&lt;link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet"&gt;<br>
+					<br>
+					/* Pega esta linea al inicio del archivo CSS*/<br>
+					@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+				</span>
+			</div>
+			<div class="section0 small0" style="order: 4;">
+				<span class="code" style="font-size:0.9em">
+					/*  declarar los valores en una linea */<br>
+					.block{<br>
+						padding:x ;/* x = 4 valores */<br>
+						<br>
+						/* x=top,bottom | y=left,right */<br>
+						padding:x y ;<br>
+						<br>
+						/* x=top | y=left,right | z=bottom */<br>
+						padding:x y z ;<br>
+						<br>
+						/* x=top | y=left | z=bottom | w=right */<br>
+						padding:x y z w;<br>					
+					}<br>
+				</span>
+			</div>
+			<div class="sectionhalf" style="order:5">
+				<p>
+					Otras cosas que se pueden hacer con las fuentes es modificar el grosor
+					de letra y definir un estilo de letra para que cambie de aspecto, a 
+					cursivo por ejemplo, y establecer otras fuentes diferentes en caso 
+					de que tu primera opcion falle por alguna razon. En este ejemplo estoy 
+					usando Montserrat Alternates como fuente principal y sans-serif 
+					como respaldo, un grosor de 800 y estilo normal. ( ^__^)
+				</p>
+			</div>
+			<div class="section0" style="order:6">
+				<span class="code">
+					<br>
+					.montserrat-alternates-extrabold {<br>
+  					&nbsp;&nbsp;font-family: "Montserrat Alternates", sans-serif;<br>
+  					&nbsp;&nbsp;font-weight: 800;<br>
+  					&nbsp;&nbsp;font-style: normal;<br>
+					}<br>
+					<br>
+				</span>
+			</div>
+			<!-- ------------------------------------------------------------------------------ -->
 			<!-- -------------- video ----------------- -->
-			<div class="embed embedbig" style="order:5">
+			<div class="embed embedbig" style="order:7">
 				<iframe
 					width="100%"
 					height="100%"

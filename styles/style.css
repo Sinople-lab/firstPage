@@ -288,7 +288,7 @@ ul>li:hover .dropdown-content{
 .directions > a{
     color: var(--color-success);
 }
-/* ---------------------------------------- */
+/* ------------------------------------------ */
 .container{
     /* border:solid 2px white; */
     display: flex;
