@@ -152,7 +152,7 @@
 		<div class="container">
 			
 			<div class="sectionhalf" style="order:1">
-				<h3>Como usar fuentes en html ( ^__^)/  <i class="fa fa-align-left" ></i></h3>
+				<h3>Como editar fuentes en html ( ^__^)/  <i class="fa fa-align-left" ></i></h3>
 				<p>
 					Empezamos con agregar la propiedad <i class="code">font-family</i> cualquier clase
 					que se utilice para texto, por ejemplo <i class="code">a</i>, y defines la fuente 
@@ -163,7 +163,6 @@
 
 			<div class="section0" style="order:2">
 				<span class="code">
-					<br>
 					a {<br>
 					&nbsp;&nbsp;font-family: "Roboto", sans-serif;<br>
 					}<br>
@@ -195,19 +194,26 @@
 			</div>
 			<div class="section0 small0" style="order: 4;">
 				<span class="code" style="font-size:0.9em">
-					/*  declarar los valores en una linea */<br>
-					.block{<br>
-						padding:x ;/* x = 4 valores */<br>
-						<br>
-						/* x=top,bottom | y=left,right */<br>
-						padding:x y ;<br>
-						<br>
-						/* x=top | y=left,right | z=bottom */<br>
-						padding:x y z ;<br>
-						<br>
-						/* x=top | y=left | z=bottom | w=right */<br>
-						padding:x y z w;<br>					
-					}<br>
+					&lt;link<br>
+					&lt;rel="preconnect"<br>
+					&lt;href="https://fonts.googleapis.com"<br>
+					&gt;<br>
+					&lt;link<br>
+					&lt;rel="preconnect"<br>
+					&lt;href="https://fonts.gstatic.com"<br>
+					&lt;crossorigin<br>
+					&gt;<br>
+					&lt;link<br>
+					&lt;href="https://fonts.googleapis.com/<br>
+					&lt;css2?family=Italiana&display=swap"<br>
+					&lt;rel="stylesheet"<br>
+					&gt;<br>
+					<br>
+					/* Pega esta linea al inicio<br>
+					del archivo CSS*/<br>
+					@import url('https://fonts.googleapis.com/<br>
+					css2?family=Montserrat:ital,wght@0,100..900;<br>
+					1,100..900&display=swap');<br>
 				</span>
 			</div>
 			<div class="sectionhalf" style="order:5">
